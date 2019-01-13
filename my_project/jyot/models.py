@@ -12,6 +12,7 @@ class Signin(models.Model):
 	mobile = models.BigIntegerField()
 	password = models.CharField(max_length=250,default='KIET123')
 	email = models.CharField(max_length=250, null=True)
+	# address = models.CharField(max_length=500,null=True)
 
 class Dropdown(models.Model):
 	uniq_id = models.AutoField(primary_key=True)
@@ -34,7 +35,7 @@ class Materials(models.Model):
 
 class Request(models.Model):
    
-	# answer_id=models.AutoField(primary_key=True)
+	# auto_id=models.AutoField(primary_key=True)
 	user_id_added_by_uniq_id=models.ForeignKey(Materials,null=True,on_delete=models.SET_NULL)
 	govt_id=models.ForeignKey(Signin,null=True,on_delete=models.SET_NULL)
 	time_stamp=models.DateTimeField(auto_now=True)

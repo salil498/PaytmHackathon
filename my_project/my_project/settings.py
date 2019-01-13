@@ -25,7 +25,7 @@ SECRET_KEY = '$ui9p)o&4isum1v$v5pc#5eu#u98ul+h1se-j8#0$i-h1^r&gd'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['10.21.66.248','127.0.0.1','192.168.137.4']
+ALLOWED_HOSTS = ['10.21.66.248','127.0.0.1','192.168.137.4','10.42.0.68']
 
 CORS_ORIGIN_ALLOW_ALL=True
 CORS_ALLOW_METHODS=('GET','POST','OPTIONS','PUT')
