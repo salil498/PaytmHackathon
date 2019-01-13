@@ -1,0 +1,112 @@
+// tab form-wizard
+.tab-wizard {
+  .nav-tabs {
+    >li {
+
+      >a {
+        text-align: left;
+        position: relative;
+        border: 0!important;
+        padding: 30px 15px;
+        background-color: $lighter-success;
+        text-transform: uppercase;
+        color: #fff;
+        font-family: $font-raleway;
+        letter-spacing: 1px;
+        font-weight: $font-weight-bold;
+        font-size: $font-size-sm;
+        border-radius: 0;
+
+        .wizard-step {
+          text-align: center;
+          border-radius: 50%;
+          border: 1px solid #fff;
+          width: 26px;
+          height: 26px;
+          line-height: 24px;
+          padding-left: 1px;
+          margin-top: -5px;
+        }
+
+        &:hover {
+          background-color: $lighten-success;
+        }
+      }
+
+      &:last-child {
+        >a {
+          &:after,
+          &:before {
+            display: none;
+          }
+          .wizard-step {
+            margin-right: 0;
+          }
+        }
+      }
+
+      &.active {
+        border-right: 0;
+        >a {
+          background-color: white;
+          color: #333;
+          .wizard-step {
+            border-color: #333;
+          }
+        }
+      }
+
+      &.disabled {
+        border-right: 1px solid #ddd;
+        >a {
+          background-color: #f2f2f2;
+          color: #bbb;
+          .wizard-step {
+            border-color: #ddd;
+          }
+          &:hover {
+            background-color: #f2f2f2;
+          }
+        }
+        &:last-child {
+          border-right: 0;
+        }
+      }
+
+      &.active~li:not(.disabled) {
+        border-right: 1px solid #ddd;
+        >a {
+          background-color: #f2f2f2;
+          color: #333;
+          .wizard-step {
+            border-color: #333;
+          }
+          &:hover {
+            background-color: #ddd;
+          }
+        }
+        &:last-child {
+          border-right: 0;
+        }
+      }
+    }
+  }
+  .tab-content {
+    .tab-pane {
+      margin-top: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .tab-wizard .nav-tabs > li > a {
+    text-align: center;
+    height: 110px;
+
+    .wizard-step {
+      float: none!important;
+      display: block;
+      margin: 10px auto 0!important;
+    }
+  }
+}

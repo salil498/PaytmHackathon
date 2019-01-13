@@ -1,0 +1,304 @@
+<div class="page page-extra pull-to-header">
+
+
+
+  <ol class="breadcrumb bg-white">
+    <li><a ui-sref="dashboard">Home</a></li>
+    <li><a href="javascript:;">Extra Pages</a></li>
+    <li class="active">Gallery</li>
+  </ol>
+
+
+  <!-- row -->
+  <div class="row">
+
+
+    <!-- col -->
+    <div class="col-md-12">
+
+      <div class="tile">
+
+        <uib-tabset class="minotaur-tab minotaur-tab-light padded">
+
+          <uib-tab heading="4 Columns">
+
+            <ul class="mix-filter pull-right">
+              <li class="filter" data-filter="all">
+                All
+              </li>
+              <li class="filter" data-filter=".cats">
+                Cats
+              </li>
+              <li class="filter" data-filter=".animals">
+                Animals
+              </li>
+              <li class="filter" data-filter=".cities">
+                Cities
+              </li>
+              <li class="filter" data-filter=".cats, .animals">
+                Cats and Animals
+              </li>
+            </ul>
+
+            <ul class="mix-controls">
+              <li class="select-all">
+                <label class="checkbox minotaur-checkbox inline-block m-0">Select all
+                  <input type="checkbox" ng-model="selectedAll" ng-click="ctrl.selectAll()"><div class="input-indicator"></div>
+                </label>
+              </li>
+              <li ng-class="{'disabled': !ctrl.isSelected}">
+                <a href="javascript:;"><i class="fa fa-envelope-o"></i> Email</a>
+              </li>
+              <li ng-class="{'disabled': !ctrl.isSelected}">
+                <a href="javascript:;"><i class="fa fa-download"></i> Download</a>
+              </li>
+              <li ng-class="{'disabled': !ctrl.isSelected}">
+                <a href="javascript:;"><i class="fa fa-pencil"></i> Edit</a>
+              </li>
+              <li ng-class="{'disabled': !ctrl.isSelected}">
+                <a href="javascript:;"><i class="fa fa-trash-o"></i> Delete</a>
+              </li>
+            </ul>
+
+            <!-- row -->
+            <div class="row mix-grid">
+
+              <div class="gallery" ng-mixitup magnific-popup="{
+                delegate: 'a.img-preview',
+                type: 'image',
+                tLoading: 'Loading image #%curr%...',
+                mainClass: 'mfp-img-mobile',
+                gallery: {
+                  enabled: true,
+                  navigateByImgClick: true,
+                  preload: [0,1]
+                }
+               }"
+              >
+
+                <!-- col -->
+                <div class="col-md-3 col-sm-4 mb-20 mix {{image.category}}" ng-class="{'selected': image.selected}" ng-repeat="image in ctrl.images">
+                  <div class="img-container">
+                    <img class="img-responsive" ng-src="{{image.src}}" alt="">
+                    <div class="img-details">
+                      <h4>{{image.title}}</h4>
+                      <div class="img-controls">
+                        <a href="javascript:;" class="img-select" ng-click="ctrl.selectImage($index)">
+                          <i class="fa fa-circle-o" ng-show="!image.selected"></i>
+                          <i class="fa fa-circle" ng-show="image.selected"></i>
+                        </a>
+                        <a href="javascript:;" class="img-link">
+                          <i class="fa fa-link"></i>
+                        </a>
+                        <a class="img-preview" href="{{image.src}}" title="{{image.title}}">
+                          <i class="fa fa-search"></i>
+                        </a>
+                        <a href="javascript:;" class="img-more">
+                          <i class="fa fa-ellipsis-v"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- /col -->
+
+              </div>
+
+            </div>
+            <!-- /row -->
+
+          </uib-tab>
+
+          <uib-tab heading="3 Columns">
+
+            <ul class="mix-filter pull-right">
+              <li class="filter active" data-filter="all">
+                All
+              </li>
+              <li class="filter" data-filter=".cats">
+                Cats
+              </li>
+              <li class="filter" data-filter=".animals">
+                Animals
+              </li>
+              <li class="filter" data-filter=".cities">
+                Cities
+              </li>
+              <li class="filter" data-filter=".cats, .animals">
+                Cats and Animals
+              </li>
+            </ul>
+
+            <ul class="mix-controls">
+              <li class="select-all">
+                <label class="checkbox minotaur-checkbox inline-block m-0">Select all
+                  <input type="checkbox" ng-model="selectedAll" ng-click="ctrl.selectAll()"><div class="input-indicator"></div>
+                </label>
+              </li>
+              <li ng-class="{'disabled': !ctrl.isSelected}">
+                <a href="javascript:;"><i class="fa fa-envelope-o"></i> Email</a>
+              </li>
+              <li ng-class="{'disabled': !ctrl.isSelected}">
+                <a href="javascript:;"><i class="fa fa-download"></i> Download</a>
+              </li>
+              <li ng-class="{'disabled': !ctrl.isSelected}">
+                <a href="javascript:;"><i class="fa fa-pencil"></i> Edit</a>
+              </li>
+              <li ng-class="{'disabled': !ctrl.isSelected}">
+                <a href="javascript:;"><i class="fa fa-trash-o"></i> Delete</a>
+              </li>
+            </ul>
+
+            <!-- row -->
+            <div class="row mix-grid">
+
+              <div class="gallery" ng-mixitup magnific-popup="{
+                delegate: 'a.img-preview',
+                type: 'image',
+                tLoading: 'Loading image #%curr%...',
+                mainClass: 'mfp-img-mobile',
+                gallery: {
+                  enabled: true,
+                  navigateByImgClick: true,
+                  preload: [0,1]
+                }
+               }"
+              >
+
+                <!-- col -->
+                <div class="col-md-4 col-sm-6 mb-20 mix {{image.category}}" ng-class="{'selected': image.selected}" ng-repeat="image in ctrl.images">
+                  <div class="img-container">
+                    <img class="img-responsive" ng-src="{{image.src}}" alt="">
+                    <div class="img-details">
+                      <h4>{{image.title}}</h4>
+                      <div class="img-controls">
+                        <a href="javascript:;" class="img-select" ng-click="ctrl.selectImage($index)">
+                          <i class="fa fa-circle-o" ng-show="!image.selected"></i>
+                          <i class="fa fa-circle" ng-show="image.selected"></i>
+                        </a>
+                        <a href="javascript:;" class="img-link">
+                          <i class="fa fa-link"></i>
+                        </a>
+                        <a class="img-preview" href="{{image.src}}" title="{{image.title}}">
+                          <i class="fa fa-search"></i>
+                        </a>
+                        <a href="javascript:;" class="img-more">
+                          <i class="fa fa-ellipsis-v"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- /col -->
+
+              </div>
+
+            </div>
+            <!-- /row -->
+
+          </uib-tab>
+
+          <uib-tab heading="2 Columns">
+
+            <ul class="mix-filter pull-right">
+              <li class="filter active" data-filter="all">
+                All
+              </li>
+              <li class="filter" data-filter=".cats">
+                Cats
+              </li>
+              <li class="filter" data-filter=".animals">
+                Animals
+              </li>
+              <li class="filter" data-filter=".cities">
+                Cities
+              </li>
+              <li class="filter" data-filter=".cats, .animals">
+                Cats and Animals
+              </li>
+            </ul>
+
+            <ul class="mix-controls">
+              <li class="select-all">
+                <label class="checkbox minotaur-checkbox inline-block m-0">Select all
+                  <input type="checkbox" ng-model="selectedAll" ng-click="ctrl.selectAll()"><div class="input-indicator"></div>
+                </label>
+              </li>
+              <li ng-class="{'disabled': !ctrl.isSelected}">
+                <a href="javascript:;"><i class="fa fa-envelope-o"></i> Email</a>
+              </li>
+              <li ng-class="{'disabled': !ctrl.isSelected}">
+                <a href="javascript:;"><i class="fa fa-download"></i> Download</a>
+              </li>
+              <li ng-class="{'disabled': !ctrl.isSelected}">
+                <a href="javascript:;"><i class="fa fa-pencil"></i> Edit</a>
+              </li>
+              <li ng-class="{'disabled': !ctrl.isSelected}">
+                <a href="javascript:;"><i class="fa fa-trash-o"></i> Delete</a>
+              </li>
+            </ul>
+
+            <!-- row -->
+            <div class="row mix-grid">
+
+              <div class="gallery" ng-mixitup magnific-popup="{
+                delegate: 'a.img-preview',
+                type: 'image',
+                tLoading: 'Loading image #%curr%...',
+                mainClass: 'mfp-img-mobile',
+                gallery: {
+                  enabled: true,
+                  navigateByImgClick: true,
+                  preload: [0,1]
+                }
+               }"
+              >
+
+                <!-- col -->
+                <div class="col-md-6 col-sm-6 mb-20 mix {{image.category}}" ng-class="{'selected': image.selected}" ng-repeat="image in ctrl.images">
+                  <div class="img-container">
+                    <img class="img-responsive" ng-src="{{image.src}}" alt="">
+                    <div class="img-details">
+                      <h4>{{image.title}}</h4>
+                      <div class="img-controls">
+                        <a href="javascript:;" class="img-select" ng-click="ctrl.selectImage($index)">
+                          <i class="fa fa-circle-o" ng-show="!image.selected"></i>
+                          <i class="fa fa-circle" ng-show="image.selected"></i>
+                        </a>
+                        <a href="javascript:;" class="img-link">
+                          <i class="fa fa-link"></i>
+                        </a>
+                        <a class="img-preview" href="{{image.src}}" title="{{image.title}}">
+                          <i class="fa fa-search"></i>
+                        </a>
+                        <a href="javascript:;" class="img-more">
+                          <i class="fa fa-ellipsis-v"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- /col -->
+
+              </div>
+
+            </div>
+            <!-- /row -->
+
+
+          </uib-tab>
+        </uib-tabset>
+
+      </div>
+
+    </div>
+    <!-- /col -->
+
+
+  </div>
+  <!-- /row -->
+
+
+
+
+</div>

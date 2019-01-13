@@ -1,0 +1,85 @@
+minotaur-customize {
+  position: fixed;
+  right: -320px;
+  top: 250px;
+  z-index: 99;
+  transition: all .25s linear;
+
+  &.open {
+    right: -1px;
+  }
+
+  .toggle {
+    border: 1px solid $theme-default;
+    border-right: 0;
+    border-radius: 4px 0 0 4px;
+    padding: 15px 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.05);
+
+    &:hover {
+      border-color: $theme-default;
+      background-color: $theme-default;
+      color: white;
+    }
+  }
+
+  .panel {
+    border: 1px solid $theme-default;
+    border-radius: 0 0 0 4px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.05);
+    width: 320px;
+
+    .panel-heading {
+      background-color: $theme-default;
+      border-radius: 0;
+      h4 {
+        margin: 0;
+        color: white;
+        font-size: 16px;
+        line-height: 30px;
+      }
+    }
+
+    .panel-body {
+      ul {
+        padding: 0;
+        li {
+          list-style-type: none;
+          display: inline-block;
+          margin-right: 5px;
+
+          div {
+            width: 30px;
+            height: 30px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all .25s linear;
+
+            &.default {
+              background-color: $theme-default;
+            }
+            &.greensea {
+              background-color: $greensea;
+            }
+            &.lightred {
+              background-color: $lightred;
+            }
+            &.amethyst {
+              background-color: $amethyst;
+            }
+            &.drank {
+              background-color: $drank;
+            }
+            &.gray {
+              background-color: $slategray;
+            }
+
+            &:hover {
+              box-shadow: 0 0 2px 1px rgba($lightred, 0.8);
+            }
+          }
+        }
+      }
+    }
+  }
+}

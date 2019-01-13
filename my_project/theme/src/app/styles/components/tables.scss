@@ -1,0 +1,461 @@
+.table {
+  &.minotaur-table {
+    border: 0!important;
+    >thead {
+      >tr {
+        th,
+        td {
+          background-color: #ebebeb;
+          border: 0;
+
+          &.sorting_asc,
+          &.sorting_desc {
+            background-color: $theme-default;
+            color: white;
+          }
+
+          &.sorting {
+            transition: background-color .25s linear;
+            &:hover {
+              background-color: #dadada;
+            }
+          }
+        }
+      }
+    }
+    >tbody {
+      >tr {
+        &:first-child {
+          th,
+          td {
+            border-top: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &.table-no-border {
+    >thead,
+    >tbody,
+    >tfoot {
+      >tr {
+        td,
+        th {
+          border: 0;
+        }
+      }
+    }
+  }
+}
+
+*[class*='bg-']:not(.bg-default) {
+  .table {
+    >thead,
+    >tbody,
+    >tfoot {
+      >tr {
+        td,
+        th {
+          border-color: $transparent-white-15;
+        }
+      }
+    }
+    &.table-bordered {
+      border-collapse: separate;
+      border: 0;
+
+      >thead,
+      >tbody,
+      >tfoot {
+        >tr {
+          td,
+          th {
+            border-bottom: 0;
+            border-right: 0;
+          }
+        }
+      }
+    }
+    &.table-hover {
+      >tbody {
+        >tr:hover {
+          td,
+          th {
+            background-color: $transparent-white-1;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 1360px) {
+  .table-responsive-wide {
+    width: 100%;
+    margin-bottom: 15px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    border: 0;
+  }
+}
+
+//datatables
+div.dataTables_wrapper {
+  table {
+    >tbody {
+      .row_selected {
+        background-color: $transparent-black-05;
+      }
+      .parent {
+        td,
+        th {
+          background-color: #f5f5f5;
+        }
+      }
+      .child {
+        td,
+        th {
+          background-color: #fafafa;
+        }
+      }
+    }
+    &.dtr-inline.collapsed {
+      >tbody>tr {
+        td,
+        th {
+          &:first-child:before {
+            border-radius: 2px;
+            top: 11px;
+            border: 0;
+            box-shadow: none;
+            background-color: $theme-default;
+          }
+        }
+      }
+    }
+
+    >tfoot {
+      background-color: $bright-default;
+      .filter_column {
+        input {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .dt-buttons {
+    float: left;
+    margin-bottom: 15px;
+  }
+  .dataTables_length {
+    font-size: 12px;
+    select {
+      border: 1px solid #ccc;
+    }
+  }
+  .dataTables_filter {
+    font-size: 12px;
+    .form-control {
+      margin-left: 5px;
+    }
+  }
+  .dataTables_info {
+    font-size: 12px;
+  }
+  div.dataTables_paginate {
+    ul.pagination {
+      margin-top: -15px;
+      margin-bottom: 15px;
+
+      .paginate_button {
+        padding: 0;
+        &:hover {
+          padding: 0;
+          border: 0;
+        }
+      }
+    }
+  }
+}
+
+table.minotaur-table.DTCR_clonedTable {
+  thead tr {
+    td,
+    th {
+      background-color: transparentize($theme-default, .7)!important;
+    }
+  }
+}
+
+div.dataTables_paginate {
+  &.paging_input {
+    margin: 0 !important;
+    padding: 0 !important;
+    float: none !important;
+    font-size: 12px;
+
+    >.btn {
+      width: 30px;
+    }
+
+    .next {
+      padding-right: 10px!important;
+      margin: 0 5px;
+      &:after {
+        content: "";
+      }
+    }
+    .previous {
+      margin: 0 5px;
+    }
+
+    .paginate_input {
+      text-align: center;
+      width: 60px;
+    }
+  }
+}
+
+//ui-grid
+.ui-grid-column-menu-button {
+  top: 2px;
+}
+
+.ui-grid-row:nth-child(even) .ui-grid-cell {
+  background-color: #f5f5f5;
+}
+
+input[type="text"].ui-grid-filter-input {
+  border: 1px solid $bright-default;
+  font-size: $font-size-small;
+  font-weight: $font-weight-normal;
+  line-height: 20px;
+  padding-left: 5px;
+
+  @include placeholder {
+    @include transition(color .2s linear);
+    color: $font-color-lighter;
+    font-family: $font-roboto;
+    font-style: $font-style-italic;
+  }
+
+  &:hover{
+    border-color: darken($bright-default, 15%);
+  }
+
+  &:focus,
+  &:focus:hover {
+    outline: none;
+    border: 1px solid;
+    border-color: $cyan;
+    @include box-shadow(none);
+  }
+}
+
+.ui-grid-menu .ui-grid-menu-inner {
+  background: white;
+
+  ul li{
+    border-bottom: 0!important;
+    &:hover {
+      @include box-shadow(none);
+      background: $brand-primary;
+      color: white;
+    }
+    &.ui-grid-menu-item-active {
+      background: $brand-primary;
+      color: white;
+    }
+  }
+}
+
+//ngTable
+.ng-table.minotaur-table {
+  >thead {
+    >tr {
+      th,
+      td {
+        background-color: #ebebeb;
+        border: 0;
+        text-align: left;
+
+        &.sort-asc,
+        &.sort-desc {
+          background-color: $theme-default;
+          color: white;
+          text-shadow: none;
+          .sort-indicator {
+            &:after,
+            &:before {
+              opacity: 1;
+              border-color: #fff transparent;
+            }
+          }
+          &:hover {
+            background-color: $theme-default!important;
+          }
+        }
+
+        &.sortable {
+          transition: background-color .25s linear;
+          &:hover {
+            background-color: #dadada;
+          }
+          .sort-indicator {
+            display: block;
+            &:after,
+            &:before {
+              float: right;
+            }
+          }
+        }
+      }
+      &.ng-table-filters {
+        th,
+        td {
+          background-color: #f5f5f5;
+        }
+      }
+      &.ng-table-group-header {
+        th,
+        td {
+          background-color: $bright-theme;
+          .sort-indicator {
+            display: inline-block;
+            &:after,
+            &:before {
+              border-color: $theme-default transparent;
+            }
+          }
+          .list-group {
+            margin-top: 5px;
+            .sort-indicator {
+              &:after,
+              &:before {
+                margin-top: -5px;
+              }
+            }
+          }
+          &.sort-asc,
+          &.sort-desc {
+            background-color: $bright-theme!important;
+            .sort-indicator {
+              display: inline-block;
+              &:after,
+              &:before {
+                border-color: $theme-default transparent;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  >tbody {
+    >tr {
+      &:first-child {
+        th,
+        td {
+          border-top: 0;
+        }
+      }
+    }
+  }
+}
+
+//smart-table
+.st-table.minotaur-table {
+  >thead {
+    tr {
+      td,
+      th {
+        &.st-sort-ascent,
+        &.st-sort-descent {
+          padding-left: 12px;
+          background-color: $theme-default;
+          color: white;
+
+          &:hover {
+            background-color: $theme-default;
+            color: white;
+          }
+          &:before {
+            @include icon;
+          }
+        }
+        &.st-sort-ascent {
+          &:before {
+            content: "\f106";
+          }
+        }
+        &.st-sort-descent {
+          &:before {
+            content: "\f107";
+          }
+        }
+      }
+    }
+    .st-filters {
+      td,
+      th {
+        background-color: #f5f5f5;
+      }
+    }
+  }
+  >tbody {
+    .st-selected {
+      td,
+      th {
+        background-color: $bright-theme;
+      }
+    }
+  }
+}
+
+//footable
+.footable.minotaur-table {
+  >thead {
+    tr {
+      td,
+      th {
+        &.footable-sortable {
+          cursor: pointer;
+          transition: background-color .25s linear;
+          &:hover {
+            background-color: #dadada;
+          }
+        }
+        &.footable-sorted,
+        &.footable-sorted-desc {
+          padding-left: 12px;
+          background-color: $theme-default;
+          color: white;
+
+          &:hover {
+            background-color: $theme-default;
+            color: white;
+          }
+          .footable-sort-indicator:before {
+            padding-left: 8px;
+            @include icon;
+          }
+        }
+        &.footable-sorted {
+          .footable-sort-indicator:before {
+            content: "\f106";
+          }
+        }
+        &.footable-sorted-desc {
+          .footable-sort-indicator:before {
+            content: "\f107";
+          }
+        }
+      }
+    }
+  }
+}
+

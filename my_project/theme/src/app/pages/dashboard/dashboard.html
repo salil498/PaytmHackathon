@@ -1,0 +1,189 @@
+
+<!--     <li><a ui-sref="dashboard">Home</a></li>
+    <li><a href="javascript:;">Mentor</a></li> -->
+  <section class="tile">
+    <h3 class="alert alert-info heading">Fill Requirements</h3>
+    <div class="tile-body" style="padding: 0;">
+      <section class="tile-widget ">
+        <form name="Activities" role="form">
+          <br>
+           <div class="row"  style=" color:white; padding-bottom:5px; ">
+               .
+             </div>
+          <div class="row">
+           <a href="" id="focus"></a>
+            <div class="col-sm-12">
+              <div class="col-sm-6">
+                <div class="col-sm-4">
+                  <label  class="control-label minotaur-label">Material<span style="color: red;">*</span></label>
+               </div>
+                <div class="col-sm-7">
+                  <select name="material" id="material" class="form-control" ng-model="vm.material" chosen="{width:'100%'}" ng-required="true" ng-options="x.uniq_id as x.value for x in vm.materialdropdwon" ng-change="vm.get__material()" >
+                    <option value="" disabled>Choose One</option>
+                  </select>
+                </div>
+              </div>
+              <div  class="col-sm-6"  ng-if=" vm.material == '1'  " >
+                <div class="col-sm-4">
+                  <label  class="control-label minotaur-label">Category<span style="color: red;">*</span></label>
+               </div>
+                <div class="col-sm-7">
+                  <select name="category" id="category" class="form-control" ng-model="vm.category" chosen="{width:'100%'}" ng-required="true" ng-options="x.sno as x.value for x in vm.categorydropdwon"  >
+                    <option value="" disabled>Choose One</option>
+                  </select>
+                </div>
+              </div>
+             <!--  <div class="col-sm-6">
+                <div class="col-sm-4">
+                  <label  class="control-label minotaur-label">Category<span style="color: red;">*</span></label>
+               </div>
+                <div class="col-sm-7">
+                  <select name="category" id="category" class="form-control" ng-model="vm.category" chosen="{width:'100%'}" ng-required="true" ng-options="x.sno as x.value for x in vm.activity" ng-change="vm.oncategory()" >
+                    <option value="" disabled>Choose One</option>
+                  </select>
+                </div>
+              </div> -->
+            </div>
+          </div>
+          <br>
+          <div class="row" >
+            <div class="col-sm-12">
+              <div class="col-sm-6 clearfix" ng-if = "vm.category == 'Academic' &&  vm.material == '1'" >
+                <div class="col-sm-4">
+                  <label  class="control-label minotaur-label">Subject<span style="color: red;">*</span></label>
+                </div>
+                <div class="col-sm-7">
+                   <input type="text" class="form-control center"  ng-model="vm.subject"  placeholder="Subjects" ng-required="true" >
+                </div>
+              </div>
+              <div class="col-sm-6 clearfix" ng-if = "  vm.material == '1' ">
+                <div class="col-sm-4">
+                  <label  class="control-label minotaur-label">Title<span style="color: red;">*</span></label>
+                </div>
+                <div class="col-sm-7">
+                   <input type="text" class="form-control center"  ng-model="vm.title"  placeholder="Title" ng-required="true" >
+                </div>
+              </div>
+              <div class="col-sm-6 " ng-if = "  vm.material == '2' " >
+                <div class="col-sm-4">
+                  <label  class="control-label minotaur-label">Uniform<span style="color: red;">*</span></label>
+               </div>
+                <div class="col-sm-7">
+                  <select name="category" id="category" class="form-control" ng-model="vm.category" chosen="{width:'100%'}" ng-required="true" ng-options="x.sno as x.value for x in vm.activity" ng-change="vm.oncategory()" >
+                    <option value="" disabled>Choose One</option>
+                  </select>
+                </div>
+              </div>
+            </div>   
+          </div>
+          <br>
+          <div class="row"  >
+            <div class="col-sm-12">
+              <div class="col-sm-6 clearfix"  ng-if = "  vm.material == '1' " >
+                <div class="col-sm-4">
+                  <label  class="control-label minotaur-label">Standard<span style="color: red;">*</span></label>
+                </div>
+                <div class="col-sm-7">
+                   <input type="number" class="form-control center"  ng-model="vm.standard"  placeholder="Standard" ng-required="true" max="12" min="1" >
+                </div>
+              </div>
+              <!-- <div class="col-sm-6 clearfix">
+                <div class="col-sm-4">
+                  <label  class="control-label minotaur-label">State<span style="color: red;">*</span></label>
+                </div>
+                <div class="col-sm-7">
+                   <input type="text" class="form-control center"  ng-model="vm.State"  placeholder=" Event's  State " ng-required="true" >
+                </div>
+              </div> -->
+            </div>   
+          </div><br>
+      <!--    <div  class="row"  ng-if=" vm.date_valid == true">  <br></div> -->
+          <div class="row" >
+            <div class="col-sm-12">
+              <div class="col-sm-6 "  ng-if = "  vm.material == '2' "  >
+                <div class="col-sm-4">
+                  <label  class="control-label minotaur-label">Size<span style="color: red;">*</span></label>
+               </div>
+                <div class="col-sm-7">
+                  <select name="size" id="size" class="form-control" ng-model="vm.size" chosen="{width:'100%'}" ng-required="true" ng-options="x.sno as x.value for x in vm.SSize" >
+                    <option value="" disabled>Choose One</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-sm-6 clearfix">
+                <div class="col-sm-4">
+                  <label  class="control-label minotaur-label">Quantity<span style="color: red;">*</span></label>
+                </div>
+                <div class="col-sm-7">
+                   <input type="text" class="form-control center"  ng-model="vm.quantity"  placeholder="Quantity" ng-required="true" >
+                </div>
+              </div>
+            </div>   
+          </div>
+           
+          
+          <br><br>
+          <div class="row">
+            <div style="padding-left:50%; "><button ng-click=" vm.Submit();" ng-disabled="Activities.$invalid"  class=" btn  btn-primary btn-rounded btn-sm mb-10 "><span>Submit</span></button></div>
+            </div>
+          <br>
+        </form>
+      </section>
+       </div>
+  </section>
+
+       <!--  <br>
+      <button class="btn btn-primary btn-border btn-rounded-20 btn-ef btn-ef-4 btn-ef-4d mb-10" ng-click="vm.view_previous();"><i class="fa  fa-arrow-down" ></i> Show Previous</button>
+      <br><br>
+      <div ng-if="vm.show_view">
+        <h3 class="alert alert-info heading" style="margin-bottom: 5px;">View Previous</h3>
+      <section class="tile">
+        <div class="tile-body table-responsive">   
+          <table ng-table="vm.tableParams" id="export" class="table minotaur-table ng-table-rowselected" style="text-align: center;" >
+
+            <tr ng-repeat = "row in $data">
+              <td data-title="'Sno.'" >
+                {{$index+1}}
+              </td>
+               <td data-title="'Activity Type'" data-sortable="'Activities_detail__activity_type__value'" filter="{ 'Activities_detail__activity_type__value': 'text' }">
+                {{row.Activities_detail__activity_type__value}}
+              </td>
+                 <td data-title="'Event Date'" data-sortable="'Activities_detail__date_of_event'" filter="{ 'Activities_detail__date_of_event': 'number' }">
+                {{row.Activities_detail__date_of_event}}
+              </td>
+               <td data-title="'Qrganized By'" data-sortable="'Activities_detail__organised_by'" filter="{ 'Activities_detail__organised_by': 'text' }">
+                {{row.Activities_detail__organised_by}}
+              </td>
+              <td data-title="'Country'" data-sortable="'Activities_detail__venue_country'" filter="{ 'Activities_detail__venue_country': 'text' }">
+                {{row.Activities_detail__venue_country}}
+              </td>
+               <td data-title="'Address'" data-sortable="'Activities_detail__venue_address'" filter="{ 'Activities_detail__venue_address': 'text' }">
+                {{row.Activities_detail__venue_address}}
+              </td>
+               <td data-title="'City'" data-sortable="'Activities_detail__venue_city'" filter="{ 'Activities_detail__venue_city': 'text' }">
+                {{row.Activities_detail__venue_city}}
+              </td>
+              <td data-title="'State'" data-sortable="'Activities_detail__venue_state'" filter="{ 'Activities_detail__venue_state': 'text' }">
+                {{row.Activities_detail__venue_state}}
+              </td>
+              <td data-title="'Description'" data-sortable="'Activities_detail__description'" filter="{ 'Activities_detail__description': 'text' }">
+                {{row.Activities_detail__description}}
+              </td>
+              <td data-title="'Status'" data-sortable="'appoval_status'" filter="{ 'appoval_status': 'text' }">
+                {{row.appoval_status}}
+              </td>
+              <td data-title="'Document'">
+                <a ng-click="vm.open_file(row.Activities_detail__student_document)" target="_blank">OPEN FILE</a>
+              </td>
+              
+              <td data-title="'Actions'" style="cursor: pointer;"><span><a style="color: green;" ng-click="vm.callforview(row);"><i class="fa fa-pencil-square-o btn-space"></i></a>&nbsp;&nbsp;&nbsp;</span>
+                <span><a style="color: red;" ng-click="vm.callfordelete(row);"><i class="fa fa-trash-o"></i></a></span>
+              </td>    
+            </tr>
+          </table>
+        </div>
+      </section>
+    </div>
+    </div>
+  </section>
+ -->

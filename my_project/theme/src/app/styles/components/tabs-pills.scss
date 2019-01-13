@@ -1,0 +1,517 @@
+//tabs
+
+.nav-tabs {
+  >li {
+    &.tabs-title {
+      padding: 8px 0 0 20px;
+      font-size: 16px;
+      font-weight: $font-weight-light;
+    }
+  }
+}
+
+.minotaur-tab {
+  .nav {
+    &.nav-tabs {
+      border: 0;
+      >li {
+        a {
+          padding: 8px 15px;
+          border: 0;
+          border-bottom: 3px solid transparent;
+          border-radius: 0;
+
+          &:hover {
+            background-color: transparent;
+          }
+        }
+        &.active {
+          margin-bottom: 0;
+        }
+      }
+      &.nav-justified {
+        > .active {
+          > a {
+            border-top: 0;
+            border-left: 0;
+            border-right: 0;
+            &:hover,
+            &:focus {
+              border-top: 0;
+              border-left: 0;
+              border-right: 0;
+            }
+          }
+        }
+      }
+    }
+    &.nav-pills {
+      >li {
+        a {
+          border-radius: 3px;
+          border-bottom: 3px solid transparent;
+        }
+      }
+    }
+  }
+
+  &.minotaur-tab-theme,
+  &.minotaur-tab-info,
+  &.minotaur-tab-amethyst,
+  &.minotaur-tab-green,
+  &.minotaur-tab-orange,
+  &.minotaur-tab-red,
+  &.minotaur-tab-greensea,
+  &.minotaur-tab-dutch,
+  &.minotaur-tab-hotpink,
+  &.minotaur-tab-drank,
+  &.minotaur-tab-blue,
+  &.minotaur-tab-lightred,
+  &.minotaur-tab-slategray,
+  &.minotaur-tab-darkgray,
+  &.minotaur-tab-primary,
+  &.minotaur-tab-success,
+  &.minotaur-tab-warning,
+  &.minotaur-tab-danger,
+  &.minotaur-tab-default {
+    .nav {
+      &.nav-tabs {
+        background-color: $darken-theme;
+
+        >li {
+          a {
+            color: $transparent-white-7;
+
+            &:hover {
+              color: white;
+            }
+          }
+
+          &.active {
+            a {
+              color: white;
+              background-color: $transparent-black-2;
+              border-bottom: 3px solid $theme-default;
+            }
+          }
+        }
+      }
+      &.nav-pills {
+        >li {
+          &.active {
+            a {
+              background-color: $darker-theme;
+              border-bottom: 3px solid $theme-default;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.minotaur-tab-info {
+    .nav.nav-tabs,
+    .nav.nav-pills {
+      background-color: $darkest-info;
+      >li {
+        &.active {
+          a {
+            border-bottom: 3px solid $brand-info;
+          }
+        }
+      }
+    }
+    .nav.nav-pills > li.active a {
+      background-color: $darker-info;
+    }
+  }
+
+  &.minotaur-tab-cyan {
+    .nav.nav-tabs,
+    .nav.nav-pills {
+      background-color: $darkest-cyan;
+      >li {
+        &.active {
+          a {
+            border-bottom: 3px solid $cyan;
+          }
+        }
+      }
+    }
+    .nav.nav-pills > li.active a {
+      background-color: $darker-cyan;
+    }
+  }
+
+  &.minotaur-tab-amethyst {
+    .nav.nav-tabs,
+    .nav.nav-pills {
+      background-color: $darkest-amethyst;
+      >li {
+        &.active {
+          a {
+            border-bottom: 3px solid $amethyst;
+          }
+        }
+      }
+    }
+    .nav.nav-pills > li.active a {
+      background-color: $darker-amethyst;
+    }
+  }
+
+  &.minotaur-tab-green {
+    .nav.nav-tabs,
+    .nav.nav-pills {
+      background-color: $darkest-green;
+      >li {
+        &.active {
+          a {
+            border-bottom: 3px solid $green;
+          }
+        }
+      }
+    }
+    .nav.nav-pills > li.active a {
+      background-color: $darker-green;
+    }
+  }
+
+  &.minotaur-tab-orange {
+    .nav.nav-tabs,
+    .nav.nav-pills {
+      background-color: $darkest-orange;
+      >li {
+        &.active {
+          a {
+            border-bottom: 3px solid $orange;
+          }
+        }
+      }
+    }
+    .nav.nav-pills > li.active a {
+      background-color: $darker-orange;
+    }
+  }
+
+  &.minotaur-tab-red {
+    .nav.nav-tabs,
+    .nav.nav-pills {
+      background-color: $darkest-red;
+      >li {
+        &.active {
+          a {
+            border-bottom: 3px solid $red;
+          }
+        }
+      }
+    }
+    .nav.nav-pills > li.active a {
+      background-color: $darker-red;
+    }
+  }
+
+  &.minotaur-tab-greensea {
+    .nav.nav-tabs,
+    .nav.nav-pills {
+      background-color: $darkest-greensea;
+      >li {
+        &.active {
+          a {
+            border-bottom: 3px solid $greensea;
+          }
+        }
+      }
+    }
+    .nav.nav-pills > li.active a {
+      background-color: $darker-greensea;
+    }
+  }
+
+  &.minotaur-tab-dutch {
+    .nav.nav-tabs,
+    .nav.nav-pills {
+      background-color: $darkest-dutch;
+      >li {
+        &.active {
+          a {
+            border-bottom: 3px solid $dutch;
+          }
+        }
+      }
+    }
+    .nav.nav-pills > li.active a {
+      background-color: $darker-dutch;
+    }
+  }
+
+  &.minotaur-tab-hotpink {
+    .nav.nav-tabs,
+    .nav.nav-pills {
+      background-color: $darkest-hotpink;
+      >li {
+        &.active {
+          a {
+            border-bottom: 3px solid $hotpink;
+          }
+        }
+      }
+    }
+    .nav.nav-pills > li.active a {
+      background-color: $darker-hotpink;
+    }
+  }
+
+  &.minotaur-tab-drank {
+    .nav.nav-tabs,
+    .nav.nav-pills {
+      background-color: $darkest-drank;
+      >li {
+        &.active {
+          a {
+            border-bottom: 3px solid $drank;
+          }
+        }
+      }
+    }
+    .nav.nav-pills > li.active a {
+      background-color: $darker-drank;
+    }
+  }
+
+  &.minotaur-tab-blue {
+    .nav.nav-tabs,
+    .nav.nav-pills {
+      background-color: $darkest-blue;
+      >li {
+        &.active {
+          a {
+            border-bottom: 3px solid $blue;
+          }
+        }
+      }
+    }
+    .nav.nav-pills > li.active a {
+      background-color: $darker-blue;
+    }
+  }
+
+  &.minotaur-tab-lightred {
+    .nav.nav-tabs,
+    .nav.nav-pills {
+      background-color: $darkest-lightred;
+      >li {
+        &.active {
+          a {
+            border-bottom: 3px solid $lightred;
+          }
+        }
+      }
+    }
+    .nav.nav-pills > li.active a {
+      background-color: $darker-lightred;
+    }
+  }
+
+  &.minotaur-tab-slategray {
+    .nav.nav-tabs,
+    .nav.nav-pills {
+      background-color: $darkest-slategray;
+      >li {
+        &.active {
+          a {
+            border-bottom: 3px solid $slategray;
+          }
+        }
+      }
+    }
+    .nav.nav-pills > li.active a {
+      background-color: $darker-slategray;
+    }
+  }
+
+  &.minotaur-tab-darkgray {
+    .nav.nav-tabs,
+    .nav.nav-pills {
+      background-color: $darkest-darkgray;
+      >li {
+        &.active {
+          a {
+            border-bottom: 3px solid $darkgray;
+          }
+        }
+      }
+    }
+    .nav.nav-pills > li.active a {
+      background-color: $darker-darkgray;
+    }
+  }
+
+  &.minotaur-tab-primary {
+    .nav.nav-tabs,
+    .nav.nav-pills {
+      background-color: $darkest-primary;
+      >li {
+        &.active {
+          a {
+            border-bottom: 3px solid $brand-primary;
+          }
+        }
+      }
+    }
+    .nav.nav-pills > li.active a {
+      background-color: $darker-primary;
+    }
+  }
+
+  &.minotaur-tab-success {
+    .nav.nav-tabs,
+    .nav.nav-pills {
+      background-color: $darkest-success;
+      >li {
+        &.active {
+          a {
+            border-bottom: 3px solid $brand-success;
+          }
+        }
+      }
+    }
+    .nav.nav-pills > li.active a {
+      background-color: $darker-success;
+    }
+  }
+
+  &.minotaur-tab-warning {
+    .nav.nav-tabs,
+    .nav.nav-pills {
+      background-color: $darkest-warning;
+      >li {
+        &.active {
+          a {
+            border-bottom: 3px solid $brand-warning;
+          }
+        }
+      }
+    }
+    .nav.nav-pills > li.active a {
+      background-color: $darker-warning;
+    }
+  }
+
+  &.minotaur-tab-danger {
+    .nav.nav-tabs,
+    .nav.nav-pills {
+      background-color: $darkest-danger;
+      >li {
+        &.active {
+          a {
+            border-bottom: 3px solid $brand-danger;
+          }
+        }
+      }
+    }
+    .nav.nav-pills > li.active a {
+      background-color: $darker-danger;
+    }
+  }
+
+  &.minotaur-tab-default {
+    .nav.nav-tabs,
+    .nav.nav-pills {
+      background-color: $darkest-default;
+      >li {
+        &.active {
+          a {
+            border-bottom: 3px solid $brand-default;
+          }
+        }
+      }
+    }
+    .nav.nav-pills > li.active a {
+      background-color: $darker-default;
+    }
+  }
+
+  &.minotaur-tab-light {
+    .nav {
+      &.nav-tabs {
+        background-color: #f2f2f2;
+
+        >li {
+          &.active {
+            a {
+              background-color: #e2e2e2;
+              border-bottom: 3px solid $theme-default;
+            }
+          }
+        }
+      }
+      &.nav-pills {
+        >li {
+          &.active {
+            a {
+              color: #555;
+              background-color: #e2e2e2;
+              border-bottom: 3px solid $theme-default;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.padded .tab-content .tab-pane {
+  padding: 15px;
+}
+
+//tabs right
+.tabs-right .nav-tabs {
+  text-align: right;
+  >li {
+    margin-right: -3px;
+    float: none;
+    display: inline-block;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+// tabs menu
+
+.tabs-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  >li {
+    margin-bottom: 1px;
+    position: relative;
+    >a {
+      display: block;
+      background-color: #f7f7f7;
+      padding: 10px 15px;
+      color: $font-color;
+
+      &:hover {
+        color: $theme-default;
+      }
+    }
+    &.active {
+      >a {
+        background-color: $theme-default;
+        color: white;
+        font-weight: $font-weight-bold;
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        @include triangle(12px, $theme-default, right);
+        right: -6px;
+        top: 15px;
+      }
+    }
+  }
+}

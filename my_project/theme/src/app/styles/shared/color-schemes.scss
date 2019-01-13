@@ -1,0 +1,1251 @@
+.appWrap {
+
+  // solid header bg
+  &.header-solid-default {
+    minotaur-header {
+      background: $theme-default;
+    }
+    #additional-header-space {
+      background: $theme-default;
+    }
+  }
+  &.header-solid-greensea {
+    minotaur-header {
+      background: $greensea;
+    }
+    #additional-header-space {
+      background: $greensea;
+    }
+  }
+  &.header-solid-lightred {
+    minotaur-header {
+      background: $lightred;
+    }
+    #additional-header-space {
+      background: $lightred;
+    }
+  }
+  &.header-solid-amethyst {
+    minotaur-header {
+      background: $amethyst;
+    }
+    #additional-header-space {
+      background: $amethyst;
+    }
+  }
+  &.header-solid-drank {
+    minotaur-header {
+      background: $drank;
+    }
+    #additional-header-space {
+      background: $drank;
+    }
+  }
+  &.header-solid-gray {
+    minotaur-header {
+      background: $slategray;
+    }
+    #additional-header-space {
+      background: $slategray;
+    }
+  }
+
+  // gradient header bg
+  &.header-gradient-greensea {
+    minotaur-header {
+      background: linear-gradient(to right, darken($greensea, 15%) 0%, $greensea 100%);
+    }
+    #additional-header-space {
+      background: linear-gradient(to right, darken($greensea, 15%) 0%, $greensea 100%);
+    }
+  }
+  &.header-gradient-lightred {
+    minotaur-header {
+      background: linear-gradient(to right, darken($lightred, 15%) 0%, $lightred 100%);
+    }
+    #additional-header-space {
+      background: linear-gradient(to right, darken($lightred, 15%) 0%, $lightred 100%);
+    }
+  }
+  &.header-gradient-amethyst {
+    minotaur-header {
+      background: linear-gradient(to right, darken($amethyst, 15%) 0%, $amethyst 100%);
+    }
+    #additional-header-space {
+      background: linear-gradient(to right, darken($amethyst, 15%) 0%, $amethyst 100%);
+    }
+  }
+  &.header-gradient-drank {
+    minotaur-header {
+      background: linear-gradient(to right, darken($drank, 15%) 0%, $drank 100%);
+    }
+    #additional-header-space {
+      background: linear-gradient(to right, darken($drank, 15%) 0%, $drank 100%);
+    }
+  }
+  &.header-gradient-gray {
+    minotaur-header {
+      background: linear-gradient(to right, darken($slategray, 15%) 0%, $slategray 100%);
+    }
+    #additional-header-space {
+      background: linear-gradient(to right, darken($slategray, 15%) 0%, $slategray 100%);
+    }
+  }
+
+  // navigation bg
+  &.navigation-dark {
+    minotaur-nav {
+      border-right: 0;
+      background-color: $darkgray;
+
+      .nav-heading {
+        h3 {
+          border-bottom: 0;
+        }
+      }
+
+      .nav-sidebar {
+        li {
+          >a {
+            color: #c0c4c9;
+
+            >i {
+              background-color: darken($darkgray, 10%);
+              color: #c0c4c9;
+            }
+
+            &:hover {
+              background-color: darken($darkgray, 10%);
+              color: white;
+              >i {
+                background-color: white;
+                color: $darkgray;
+              }
+            }
+          }
+          &.dropdown {
+            &.open {
+              >a {
+                background-color: darken($darkgray, 10%);
+                color: white;
+                >i {
+                  background-color: white;
+                  color: $darkgray;
+                }
+              }
+              >ul {
+                background-color: darken($darkgray, 5%);
+              }
+            }
+          }
+        }
+      }
+
+      .nav-sidebar > .active > a,
+      .nav-sidebar > .active > a:hover,
+      .nav-sidebar > .active > a:focus,
+      .nav-sidebar > .dropdown.active.open > a,
+      .nav-sidebar > .dropdown.active.open > a:hover,
+      .nav-sidebar > .dropdown.active.open > a:focus{
+        background-color: $theme-default;
+        color: #fff;
+        outline: 0;
+        >i {
+          color: $theme-default;
+          background-color: #fff;
+        }
+        + ul > li.active > a {
+          color: #fff;
+          > i {
+            color: $theme-default;
+            background-color: #fff;
+          }
+        }
+      }
+    }
+    &.hz-menu {
+      @media only screen and (min-width: 1200px) {
+        minotaur-nav {
+          .nav-sidebar {
+            >li {
+              >a {
+                >i {
+                  background-color: transparent;
+                }
+              }
+              &:hover {
+                >a {
+                  background-color: darken($darkgray, 10%);
+                  color: white;
+                  >i {
+                    color: white;
+                  }
+                }
+              }
+              &.dropdown {
+                >ul {
+                  background-color: darken($darkgray, 10%);
+                }
+              }
+              li.submenu > ul {
+                background-color: darken($darkgray, 10%);
+              }
+            }
+          }
+          .nav-sidebar > .active > a,
+          .nav-sidebar > .active > a:hover,
+          .nav-sidebar > .active > a:focus,
+          .nav-sidebar > .dropdown.active.open > a,
+          .nav-sidebar > .dropdown.active.open > a:hover,
+          .nav-sidebar > .dropdown.active.open > a:focus{
+            color: white;
+            >i {
+              color: #fff;
+              background-color: transparent;
+            }
+            + ul > li.active > a {
+              color: #fff;
+              > i {
+                color: #fff;
+                background-color: transparent;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //primary color
+  &.primary-color-greensea {
+    .tile .tile-header .heading,
+    #content a:not(.btn) {
+      color: $greensea;
+    }
+    #content {
+      .active > a {
+        color: white;
+      }
+      .breadcrumb > li {
+        a {
+          color: $font-color;
+          &:hover {
+            color: $greensea;
+          }
+        }
+        &.active {
+          color: $greensea;
+        }
+      }
+    }
+    minotaur-nav {
+      .nav-heading {
+        h3 {
+          > a {
+            color: $greensea;
+          }
+        }
+      }
+      .nav-sidebar > .active > a,
+      .nav-sidebar > .active > a:hover,
+      .nav-sidebar > .active > a:focus,
+      .nav-sidebar > .dropdown.active.open > a,
+      .nav-sidebar > .dropdown.active.open > a:hover,
+      .nav-sidebar > .dropdown.active.open > a:focus{
+        color: $greensea;
+        >i {
+          background-color: $greensea;
+        }
+        + ul > li.active > a {
+          > i {
+            background-color: $greensea;
+          }
+        }
+      }
+    }
+    &.hz-menu:not(.navigation-dark) {
+      @media only screen and (min-width: 1200px) {
+        minotaur-nav {
+          background-color: darken($greensea, 10%);
+
+          .nav-sidebar {
+            >li {
+              &:hover {
+                >a {
+                  background-color: darken($greensea, 15%);;
+                }
+              }
+              &.dropdown {
+                >ul {
+                  background-color: darken($greensea, 15%);
+                }
+              }
+              li.submenu {
+                >ul {
+                  background-color: darken($greensea, 15%);
+                }
+              }
+            }
+          }
+          .nav-sidebar > .active > a,
+          .nav-sidebar > .active > a:hover,
+          .nav-sidebar > .active > a:focus,
+          .nav-sidebar > .dropdown.active.open > a,
+          .nav-sidebar > .dropdown.active.open > a:hover,
+          .nav-sidebar > .dropdown.active.open > a:focus{
+            background-color: $greensea;
+            outline: 0;
+            color: white;
+            >i {
+              color: #fff;
+              background-color: transparent;
+            }
+            + ul > li.active > a {
+              color: #21252d;
+              > i {
+                color: #fff;
+                background-color: transparent;
+              }
+            }
+          }
+        }
+      }
+    }
+    &.navigation-dark {
+      minotaur-nav {
+        .nav-sidebar > .active > a,
+        .nav-sidebar > .active > a:hover,
+        .nav-sidebar > .active > a:focus,
+        .nav-sidebar > .dropdown.active.open > a,
+        .nav-sidebar > .dropdown.active.open > a:hover,
+        .nav-sidebar > .dropdown.active.open > a:focus{
+          background-color: $greensea;
+          color: #fff;
+          >i {
+            color: $greensea;
+            background-color: #fff;
+          }
+          + ul > li.active > a {
+            color: #fff;
+            > i {
+              color: $greensea;
+              background-color: #fff;
+            }
+          }
+        }
+      }
+      &.hz-menu {
+        @media only screen and (min-width: 1200px) {
+          minotaur-nav {
+            .nav-sidebar > .active > a,
+            .nav-sidebar > .active > a:hover,
+            .nav-sidebar > .active > a:focus,
+            .nav-sidebar > .dropdown.active.open > a,
+            .nav-sidebar > .dropdown.active.open > a:hover,
+            .nav-sidebar > .dropdown.active.open > a:focus{
+              color: white;
+              >i {
+                color: #fff;
+                background-color: transparent;
+              }
+              + ul > li.active > a {
+                color: #fff;
+                > i {
+                  color: #fff;
+                  background-color: transparent;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .form-control {
+      &:focus,
+      &:hover:focus {
+        border-color: $greensea;
+      }
+    }
+    .form-group {
+      &.legend {
+        h1, h2, h3, h4, h5, h6 {
+          color: $greensea;
+        }
+      }
+    }
+    .minotaur-checkbox,
+    .minotaur-radio {
+      /* Checked state */
+      input:checked ~ .input-indicator {
+        background: $greensea;
+      }
+      /* Hover state whilst checked */
+      &:hover input:not([disabled]):checked ~ .input-indicator,
+      input:checked:focus ~ .input-indicator {
+        background: darken($greensea, 15%);
+      }
+    }
+    .table {
+      &.minotaur-table {
+        >thead {
+          >tr {
+            th,
+            td {
+              &.sorting_asc,
+              &.sorting_desc {
+                background-color: $greensea;
+              }
+            }
+          }
+        }
+      }
+    }
+    div.dataTables_wrapper {
+      table {
+        &.dtr-inline.collapsed {
+          >tbody>tr {
+            td,
+            th {
+              &:first-child:before {
+                background-color: $greensea;
+              }
+            }
+          }
+        }
+      }
+    }
+    table.minotaur-table.DTCR_clonedTable {
+      thead tr {
+        td,
+        th {
+          background-color: transparentize($greensea, .7)!important;
+        }
+      }
+    }
+  }
+  &.primary-color-lightred {
+    .tile .tile-header .heading,
+    #content a:not(.btn) {
+      color: $lightred;
+    }
+    #content {
+      .active > a {
+        color: white;
+      }
+      .breadcrumb > li {
+        a {
+          color: $font-color;
+          &:hover {
+            color: $lightred;
+          }
+        }
+        &.active {
+          color: $lightred;
+        }
+      }
+    }
+    minotaur-nav {
+      .nav-heading {
+        h3 {
+          > a {
+            color: $lightred;
+          }
+        }
+      }
+      .nav-sidebar > .active > a,
+      .nav-sidebar > .active > a:hover,
+      .nav-sidebar > .active > a:focus,
+      .nav-sidebar > .dropdown.active.open > a,
+      .nav-sidebar > .dropdown.active.open > a:hover,
+      .nav-sidebar > .dropdown.active.open > a:focus{
+        color: $lightred;
+        >i {
+          background-color: $lightred;
+        }
+        + ul > li.active > a {
+          > i {
+            background-color: $lightred;
+          }
+        }
+      }
+    }
+    &.hz-menu:not(.navigation-dark) {
+      @media only screen and (min-width: 1200px) {
+        minotaur-nav {
+          background-color: darken($lightred, 10%);
+
+          .nav-sidebar {
+            >li {
+              &:hover {
+                >a {
+                  background-color: darken($lightred, 15%);;
+                }
+              }
+              &.dropdown {
+                >ul {
+                  background-color: darken($lightred, 15%);
+                }
+              }
+              li.submenu {
+                >ul {
+                  background-color: darken($lightred, 15%);
+                }
+              }
+            }
+          }
+          .nav-sidebar > .active > a,
+          .nav-sidebar > .active > a:hover,
+          .nav-sidebar > .active > a:focus,
+          .nav-sidebar > .dropdown.active.open > a,
+          .nav-sidebar > .dropdown.active.open > a:hover,
+          .nav-sidebar > .dropdown.active.open > a:focus{
+            background-color: $lightred;
+            outline: 0;
+            color: white;
+            >i {
+              color: #fff;
+              background-color: transparent;
+            }
+            + ul > li.active > a {
+              color: #21252d;
+              > i {
+                color: #fff;
+                background-color: transparent;
+              }
+            }
+          }
+        }
+      }
+    }
+    &.navigation-dark {
+      minotaur-nav {
+        .nav-sidebar > .active > a,
+        .nav-sidebar > .active > a:hover,
+        .nav-sidebar > .active > a:focus,
+        .nav-sidebar > .dropdown.active.open > a,
+        .nav-sidebar > .dropdown.active.open > a:hover,
+        .nav-sidebar > .dropdown.active.open > a:focus{
+          background-color: $lightred;
+          color: #fff;
+          >i {
+            color: $lightred;
+            background-color: #fff;
+          }
+          + ul > li.active > a {
+            color: #fff;
+            > i {
+              color: $lightred;
+              background-color: #fff;
+            }
+          }
+        }
+      }
+      &.hz-menu {
+        @media only screen and (min-width: 1200px) {
+          minotaur-nav {
+            .nav-sidebar > .active > a,
+            .nav-sidebar > .active > a:hover,
+            .nav-sidebar > .active > a:focus,
+            .nav-sidebar > .dropdown.active.open > a,
+            .nav-sidebar > .dropdown.active.open > a:hover,
+            .nav-sidebar > .dropdown.active.open > a:focus{
+              color: white;
+              >i {
+                color: #fff;
+                background-color: transparent;
+              }
+              + ul > li.active > a {
+                color: #fff;
+                > i {
+                  color: #fff;
+                  background-color: transparent;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .form-control {
+      &:focus,
+      &:hover:focus {
+        border-color: $lightred;
+      }
+    }
+    .form-group {
+      &.legend {
+        h1, h2, h3, h4, h5, h6 {
+          color: $lightred;
+        }
+      }
+    }
+    .minotaur-checkbox,
+    .minotaur-radio {
+      /* Checked state */
+      input:checked ~ .input-indicator {
+        background: $lightred;
+      }
+      /* Hover state whilst checked */
+      &:hover input:not([disabled]):checked ~ .input-indicator,
+      input:checked:focus ~ .input-indicator {
+        background: darken($lightred, 15%);
+      }
+    }
+    .table {
+      &.minotaur-table {
+        >thead {
+          >tr {
+            th,
+            td {
+              &.sorting_asc,
+              &.sorting_desc {
+                background-color: $lightred;
+              }
+            }
+          }
+        }
+      }
+    }
+    div.dataTables_wrapper {
+      table {
+        &.dtr-inline.collapsed {
+          >tbody>tr {
+            td,
+            th {
+              &:first-child:before {
+                background-color: $lightred;
+              }
+            }
+          }
+        }
+      }
+    }
+    table.minotaur-table.DTCR_clonedTable {
+      thead tr {
+        td,
+        th {
+          background-color: transparentize($lightred, .7)!important;
+        }
+      }
+    }
+  }
+  &.primary-color-amethyst {
+    .tile .tile-header .heading,
+    #content a:not(.btn) {
+      color: $amethyst;
+    }
+    #content {
+      .active > a {
+        color: white;
+      }
+      .breadcrumb > li {
+        a {
+          color: $font-color;
+          &:hover {
+            color: $amethyst;
+          }
+        }
+        &.active {
+          color: $amethyst;
+        }
+      }
+    }
+    minotaur-nav {
+      .nav-heading {
+        h3 {
+          > a {
+            color: $amethyst;
+          }
+        }
+      }
+      .nav-sidebar > .active > a,
+      .nav-sidebar > .active > a:hover,
+      .nav-sidebar > .active > a:focus,
+      .nav-sidebar > .dropdown.active.open > a,
+      .nav-sidebar > .dropdown.active.open > a:hover,
+      .nav-sidebar > .dropdown.active.open > a:focus{
+        color: $amethyst;
+        >i {
+          background-color: $amethyst;
+        }
+        + ul > li.active > a {
+          > i {
+            background-color: $amethyst;
+          }
+        }
+      }
+    }
+    &.hz-menu:not(.navigation-dark) {
+      @media only screen and (min-width: 1200px) {
+        minotaur-nav {
+          background-color: darken($amethyst, 10%);
+
+          .nav-sidebar {
+            >li {
+              &:hover {
+                >a {
+                  background-color: darken($amethyst, 15%);;
+                }
+              }
+              &.dropdown {
+                >ul {
+                  background-color: darken($amethyst, 15%);
+                }
+              }
+              li.submenu {
+                >ul {
+                  background-color: darken($amethyst, 15%);
+                }
+              }
+            }
+          }
+          .nav-sidebar > .active > a,
+          .nav-sidebar > .active > a:hover,
+          .nav-sidebar > .active > a:focus,
+          .nav-sidebar > .dropdown.active.open > a,
+          .nav-sidebar > .dropdown.active.open > a:hover,
+          .nav-sidebar > .dropdown.active.open > a:focus{
+            background-color: $amethyst;
+            outline: 0;
+            color: white;
+            >i {
+              color: #fff;
+              background-color: transparent;
+            }
+            + ul > li.active > a {
+              color: #21252d;
+              > i {
+                color: #fff;
+                background-color: transparent;
+              }
+            }
+          }
+        }
+      }
+    }
+    &.navigation-dark {
+      minotaur-nav {
+        .nav-sidebar > .active > a,
+        .nav-sidebar > .active > a:hover,
+        .nav-sidebar > .active > a:focus,
+        .nav-sidebar > .dropdown.active.open > a,
+        .nav-sidebar > .dropdown.active.open > a:hover,
+        .nav-sidebar > .dropdown.active.open > a:focus{
+          background-color: $amethyst;
+          color: #fff;
+          >i {
+            color: $amethyst;
+            background-color: #fff;
+          }
+          + ul > li.active > a {
+            color: #fff;
+            > i {
+              color: $amethyst;
+              background-color: #fff;
+            }
+          }
+        }
+      }
+      &.hz-menu {
+        @media only screen and (min-width: 1200px) {
+          minotaur-nav {
+            .nav-sidebar > .active > a,
+            .nav-sidebar > .active > a:hover,
+            .nav-sidebar > .active > a:focus,
+            .nav-sidebar > .dropdown.active.open > a,
+            .nav-sidebar > .dropdown.active.open > a:hover,
+            .nav-sidebar > .dropdown.active.open > a:focus{
+              color: white;
+              >i {
+                color: #fff;
+                background-color: transparent;
+              }
+              + ul > li.active > a {
+                color: #fff;
+                > i {
+                  color: #fff;
+                  background-color: transparent;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .form-control {
+      &:focus,
+      &:hover:focus {
+        border-color: $amethyst;
+      }
+    }
+    .form-group {
+      &.legend {
+        h1, h2, h3, h4, h5, h6 {
+          color: $amethyst;
+        }
+      }
+    }
+    .minotaur-checkbox,
+    .minotaur-radio {
+      /* Checked state */
+      input:checked ~ .input-indicator {
+        background: $amethyst;
+      }
+      /* Hover state whilst checked */
+      &:hover input:not([disabled]):checked ~ .input-indicator,
+      input:checked:focus ~ .input-indicator {
+        background: darken($amethyst, 15%);
+      }
+    }
+    .table {
+      &.minotaur-table {
+        >thead {
+          >tr {
+            th,
+            td {
+              &.sorting_asc,
+              &.sorting_desc {
+                background-color: $amethyst;
+              }
+            }
+          }
+        }
+      }
+    }
+    div.dataTables_wrapper {
+      table {
+        &.dtr-inline.collapsed {
+          >tbody>tr {
+            td,
+            th {
+              &:first-child:before {
+                background-color: $amethyst;
+              }
+            }
+          }
+        }
+      }
+    }
+    table.minotaur-table.DTCR_clonedTable {
+      thead tr {
+        td,
+        th {
+          background-color: transparentize($amethyst, .7)!important;
+        }
+      }
+    }
+  }
+  &.primary-color-drank {
+    .tile .tile-header .heading,
+    #content a:not(.btn) {
+      color: $drank;
+    }
+    #content {
+      .active > a {
+        color: white;
+      }
+      .breadcrumb > li {
+        a {
+          color: $font-color;
+          &:hover {
+            color: $drank;
+          }
+        }
+        &.active {
+          color: $drank;
+        }
+      }
+    }
+    minotaur-nav {
+      .nav-heading {
+        h3 {
+          > a {
+            color: $drank;
+          }
+        }
+      }
+      .nav-sidebar > .active > a,
+      .nav-sidebar > .active > a:hover,
+      .nav-sidebar > .active > a:focus,
+      .nav-sidebar > .dropdown.active.open > a,
+      .nav-sidebar > .dropdown.active.open > a:hover,
+      .nav-sidebar > .dropdown.active.open > a:focus{
+        color: $drank;
+        >i {
+          background-color: $drank;
+        }
+        + ul > li.active > a {
+          > i {
+            background-color: $drank;
+          }
+        }
+      }
+    }
+    &.hz-menu:not(.navigation-dark) {
+      @media only screen and (min-width: 1200px) {
+        minotaur-nav {
+          background-color: darken($drank, 10%);
+
+          .nav-sidebar {
+            >li {
+              &:hover {
+                >a {
+                  background-color: darken($drank, 15%);;
+                }
+              }
+              &.dropdown {
+                >ul {
+                  background-color: darken($drank, 15%);
+                }
+              }
+              li.submenu {
+                >ul {
+                  background-color: darken($drank, 15%);
+                }
+              }
+            }
+          }
+          .nav-sidebar > .active > a,
+          .nav-sidebar > .active > a:hover,
+          .nav-sidebar > .active > a:focus,
+          .nav-sidebar > .dropdown.active.open > a,
+          .nav-sidebar > .dropdown.active.open > a:hover,
+          .nav-sidebar > .dropdown.active.open > a:focus{
+            background-color: $drank;
+            outline: 0;
+            color: white;
+            >i {
+              color: #fff;
+              background-color: transparent;
+            }
+            + ul > li.active > a {
+              color: #21252d;
+              > i {
+                color: #fff;
+                background-color: transparent;
+              }
+            }
+          }
+        }
+      }
+    }
+    &.navigation-dark {
+      minotaur-nav {
+        .nav-sidebar > .active > a,
+        .nav-sidebar > .active > a:hover,
+        .nav-sidebar > .active > a:focus,
+        .nav-sidebar > .dropdown.active.open > a,
+        .nav-sidebar > .dropdown.active.open > a:hover,
+        .nav-sidebar > .dropdown.active.open > a:focus{
+          background-color: $drank;
+          color: #fff;
+          >i {
+            color: $drank;
+            background-color: #fff;
+          }
+          + ul > li.active > a {
+            color: #fff;
+            > i {
+              color: $drank;
+              background-color: #fff;
+            }
+          }
+        }
+      }
+      &.hz-menu {
+        @media only screen and (min-width: 1200px) {
+          minotaur-nav {
+            .nav-sidebar > .active > a,
+            .nav-sidebar > .active > a:hover,
+            .nav-sidebar > .active > a:focus,
+            .nav-sidebar > .dropdown.active.open > a,
+            .nav-sidebar > .dropdown.active.open > a:hover,
+            .nav-sidebar > .dropdown.active.open > a:focus{
+              color: white;
+              >i {
+                color: #fff;
+                background-color: transparent;
+              }
+              + ul > li.active > a {
+                color: #fff;
+                > i {
+                  color: #fff;
+                  background-color: transparent;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .form-control {
+      &:focus,
+      &:hover:focus {
+        border-color: $drank;
+      }
+    }
+    .form-group {
+      &.legend {
+        h1, h2, h3, h4, h5, h6 {
+          color: $drank;
+        }
+      }
+    }
+    .minotaur-checkbox,
+    .minotaur-radio {
+      /* Checked state */
+      input:checked ~ .input-indicator {
+        background: $drank;
+      }
+      /* Hover state whilst checked */
+      &:hover input:not([disabled]):checked ~ .input-indicator,
+      input:checked:focus ~ .input-indicator {
+        background: darken($drank, 15%);
+      }
+    }
+    .table {
+      &.minotaur-table {
+        >thead {
+          >tr {
+            th,
+            td {
+              &.sorting_asc,
+              &.sorting_desc {
+                background-color: $drank;
+              }
+            }
+          }
+        }
+      }
+    }
+    div.dataTables_wrapper {
+      table {
+        &.dtr-inline.collapsed {
+          >tbody>tr {
+            td,
+            th {
+              &:first-child:before {
+                background-color: $drank;
+              }
+            }
+          }
+        }
+      }
+    }
+    table.minotaur-table.DTCR_clonedTable {
+      thead tr {
+        td,
+        th {
+          background-color: transparentize($drank, .7)!important;
+        }
+      }
+    }
+  }
+  &.primary-color-gray {
+    .tile .tile-header .heading,
+    #content a:not(.btn) {
+      color: $slategray;
+    }
+    #content {
+      .active > a {
+        color: white;
+      }
+      .breadcrumb > li {
+        a {
+          color: $font-color;
+          &:hover {
+            color: $slategray;
+          }
+        }
+        &.active {
+          color: $slategray;
+        }
+      }
+    }
+    minotaur-nav {
+      .nav-heading {
+        h3 {
+          > a {
+            color: $slategray;
+          }
+        }
+      }
+      .nav-sidebar > .active > a,
+      .nav-sidebar > .active > a:hover,
+      .nav-sidebar > .active > a:focus,
+      .nav-sidebar > .dropdown.active.open > a,
+      .nav-sidebar > .dropdown.active.open > a:hover,
+      .nav-sidebar > .dropdown.active.open > a:focus{
+        color: $slategray;
+        >i {
+          background-color: $slategray;
+        }
+        + ul > li.active > a {
+          > i {
+            background-color: $slategray;
+          }
+        }
+      }
+    }
+    &.hz-menu:not(.navigation-dark) {
+      @media only screen and (min-width: 1200px) {
+        minotaur-nav {
+          background-color: darken($slategray, 10%);
+
+          .nav-sidebar {
+            >li {
+              &:hover {
+                >a {
+                  background-color: darken($slategray, 15%);;
+                }
+              }
+              &.dropdown {
+                >ul {
+                  background-color: darken($slategray, 15%);
+                }
+              }
+              li.submenu {
+                >ul {
+                  background-color: darken($slategray, 15%);
+                }
+              }
+            }
+          }
+          .nav-sidebar > .active > a,
+          .nav-sidebar > .active > a:hover,
+          .nav-sidebar > .active > a:focus,
+          .nav-sidebar > .dropdown.active.open > a,
+          .nav-sidebar > .dropdown.active.open > a:hover,
+          .nav-sidebar > .dropdown.active.open > a:focus{
+            background-color: $slategray;
+            outline: 0;
+            color: white;
+            >i {
+              color: #fff;
+              background-color: transparent;
+            }
+            + ul > li.active > a {
+              color: #21252d;
+              > i {
+                color: #fff;
+                background-color: transparent;
+              }
+            }
+          }
+        }
+      }
+    }
+    &.navigation-dark {
+      minotaur-nav {
+        .nav-sidebar > .active > a,
+        .nav-sidebar > .active > a:hover,
+        .nav-sidebar > .active > a:focus,
+        .nav-sidebar > .dropdown.active.open > a,
+        .nav-sidebar > .dropdown.active.open > a:hover,
+        .nav-sidebar > .dropdown.active.open > a:focus{
+          background-color: $slategray;
+          color: #fff;
+          >i {
+            color: $slategray;
+            background-color: #fff;
+          }
+          + ul > li.active > a {
+            color: #fff;
+            > i {
+              color: $slategray;
+              background-color: #fff;
+            }
+          }
+        }
+      }
+      &.hz-menu {
+        @media only screen and (min-width: 1200px) {
+          minotaur-nav {
+            .nav-sidebar > .active > a,
+            .nav-sidebar > .active > a:hover,
+            .nav-sidebar > .active > a:focus,
+            .nav-sidebar > .dropdown.active.open > a,
+            .nav-sidebar > .dropdown.active.open > a:hover,
+            .nav-sidebar > .dropdown.active.open > a:focus{
+              color: white;
+              >i {
+                color: #fff;
+                background-color: transparent;
+              }
+              + ul > li.active > a {
+                color: #fff;
+                > i {
+                  color: #fff;
+                  background-color: transparent;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .form-control {
+      &:focus,
+      &:hover:focus {
+        border-color: $slategray;
+      }
+    }
+    .form-group {
+      &.legend {
+        h1, h2, h3, h4, h5, h6 {
+          color: $slategray;
+        }
+      }
+    }
+    .minotaur-checkbox,
+    .minotaur-radio {
+      /* Checked state */
+      input:checked ~ .input-indicator {
+        background: $slategray;
+      }
+      /* Hover state whilst checked */
+      &:hover input:not([disabled]):checked ~ .input-indicator,
+      input:checked:focus ~ .input-indicator {
+        background: darken($slategray, 15%);
+      }
+    }
+    .table {
+      &.minotaur-table {
+        >thead {
+          >tr {
+            th,
+            td {
+              &.sorting_asc,
+              &.sorting_desc {
+                background-color: $slategray;
+              }
+            }
+          }
+        }
+      }
+    }
+    div.dataTables_wrapper {
+      table {
+        &.dtr-inline.collapsed {
+          >tbody>tr {
+            td,
+            th {
+              &:first-child:before {
+                background-color: $slategray;
+              }
+            }
+          }
+        }
+      }
+    }
+    table.minotaur-table.DTCR_clonedTable {
+      thead tr {
+        td,
+        th {
+          background-color: transparentize($slategray, .7)!important;
+        }
+      }
+    }
+  }
+
+}

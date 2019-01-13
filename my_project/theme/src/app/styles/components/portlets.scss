@@ -1,0 +1,26 @@
+.portlets.connected {
+  min-height: 50px;
+}
+
+.ui-sortable-placeholder {
+  border: 3px dashed $transparent-black-1;
+  margin-bottom: 20px;
+  height: 100px;
+  visibility: visible!important;
+  background: $transparent-black-05!important;
+
+  &[class*='bg-'] {
+    background: $transparent-black-05!important;
+  }
+}
+
+.portlet {
+  .tile-header {
+    cursor: pointer;
+    transition: all .15s linear;
+
+    &:hover {
+      background-color: $transparent-black-05!important;
+    }
+  }
+}

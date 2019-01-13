@@ -1,0 +1,448 @@
+//badges
+.badge {
+  font-size: 11px;
+  font-weight: $font-weight-normal;
+  padding: 4px 7px;
+}
+
+//labels
+.label {
+  font-size: 11px;
+  font-weight: $font-weight-normal;
+}
+
+//breacrumbs
+
+.breadcrumb {
+  font-family: $font-raleway;
+  font-weight: $font-weight-bold;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 1px;
+
+  &.no-bg {
+    padding: 8px 0;
+  }
+
+  > li {
+
+    a {
+      color: $font-color;
+
+      &:hover {
+        color: $theme-default;
+        text-decoration: none;
+      }
+    }
+
+    &.active {
+      color: $theme-default;
+    }
+
+    + li:before {
+      @include icon;
+      color: #515050;
+      content: "\f105";
+      font-size: 14px;
+    }
+
+  }
+}
+
+//uib-datepicker
+
+.uib-datepicker {
+  .btn-default {
+    border-width: 0;
+    width: 100%;
+    @include box-shadow(none);
+
+    .glyphicon {
+      top: 2px;
+    }
+
+    &.uib-left,
+    &.uib-right {
+      &:hover {
+        color: white;
+        background-color: $theme-default;
+      }
+    }
+    &.uib-left {
+      border-bottom-right-radius: 0;
+      border-top-right-radius: 0;
+    }
+    &.uib-right {
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 0;
+    }
+    &.uib-title {
+      border-radius: 0;
+      line-height: 17px;
+    }
+  }
+  .btn[disabled] {
+    opacity: .3;
+  }
+  .btn-info {
+    color: white!important;
+    .text-info {
+      color: white;
+    }
+    &.active {
+      background-color: $theme-default!important;
+    }
+  }
+
+  table {
+    thead {
+      tr {
+        &:last-child {
+          th small {
+            line-height: 28px;
+            text-transform: uppercase;
+            font-size: 10px;
+            color: $font-color-light;
+          }
+        }
+      }
+    }
+    tbody {
+      tr {
+        td {
+          .btn-default {
+            border-radius: 0;
+          }
+          em {
+            text-transform: uppercase;
+            font-size: 10px;
+            font-style: normal;
+            font-family: $font-roboto;
+            color: $font-color-light;
+            font-weight: $font-weight-normal;
+          }
+        }
+      }
+    }
+  }
+}
+
+// lines
+hr {
+  &.line-full {
+    margin: 20px -20px;
+  }
+  &.line-dashed {
+    border-style: dashed;
+  }
+}
+
+// wells
+
+.well {
+  box-shadow: none;
+  border-radius: 3px;
+}
+
+// panels
+
+.panel-group {
+  .panel {
+    border-radius: 3px;
+  }
+}
+
+.panel {
+  box-shadow: none;
+  border-radius: 3px;
+
+  .panel-heading {
+    .badge {
+      margin-top: -2px;
+    }
+  }
+
+  .panel-title {
+    font-size: 14px;
+  }
+
+  &.panel-default {
+    > .panel-heading {
+      background-color: transparent;
+    }
+
+    &.panel-open {
+      > .panel-heading {
+        color: $theme-default;
+      }
+    }
+  }
+
+  &.panel-cyan {
+    border-color: $cyan;
+
+    >.panel-heading {
+      color: white;
+      background-color: $cyan;
+      border-color: $cyan;
+    }
+  }
+
+  &.panel-amethyst {
+    border-color: $amethyst;
+
+    >.panel-heading {
+      color: white;
+      background-color: $amethyst;
+      border-color: $amethyst;
+    }
+  }
+
+  &.panel-green {
+    border-color: $green;
+
+    >.panel-heading {
+      color: white;
+      background-color: $green;
+      border-color: $green;
+    }
+  }
+
+  &.panel-orange {
+    border-color: $orange;
+
+    >.panel-heading {
+      color: white;
+      background-color: $orange;
+      border-color: $orange;
+    }
+  }
+
+  &.panel-red {
+    border-color: $red;
+
+    >.panel-heading {
+      color: white;
+      background-color: $red;
+      border-color: $red;
+    }
+  }
+
+  &.panel-greensea {
+    border-color: $greensea;
+
+    >.panel-heading {
+      color: white;
+      background-color: $greensea;
+      border-color: $greensea;
+    }
+  }
+
+  &.panel-dutch {
+    border-color: $dutch;
+
+    >.panel-heading {
+      color: white;
+      background-color: $dutch;
+      border-color: $dutch;
+    }
+  }
+
+  &.panel-hotpink {
+    border-color: $hotpink;
+
+    >.panel-heading {
+      color: white;
+      background-color: $hotpink;
+      border-color: $hotpink;
+    }
+  }
+
+  &.panel-drank {
+    border-color: $drank;
+
+    >.panel-heading {
+      color: white;
+      background-color: $drank;
+      border-color: $drank;
+    }
+  }
+
+  &.panel-blue {
+    border-color: $blue;
+
+    >.panel-heading {
+      color: white;
+      background-color: $blue;
+      border-color: $blue;
+    }
+  }
+
+  &.panel-lightred {
+    border-color: $lightred;
+
+    >.panel-heading {
+      color: white;
+      background-color: $lightred;
+      border-color: $lightred;
+    }
+  }
+
+  &.panel-slategray {
+    border-color: $slategray;
+
+    >.panel-heading {
+      color: white;
+      background-color: $slategray;
+      border-color: $slategray;
+    }
+  }
+
+  &.panel-darkgray {
+    border-color: $darkgray;
+
+    >.panel-heading {
+      color: white;
+      background-color: $darkgray;
+      border-color: $darkgray;
+    }
+  }
+
+  &.panel-filled {
+    &.panel-default {
+      .panel-body {
+        background-color: white;
+      }
+    }
+    &.panel-primary {
+      .panel-body {
+        background-color: lighten($brand-primary, 10%);
+        color: white;
+      }
+    }
+    &.panel-success {
+      .panel-body {
+        background-color: lighten($brand-success, 40%);
+        color: darken($brand-success, 20%);
+      }
+    }
+    &.panel-warning {
+      .panel-body {
+        background-color: lighten($brand-warning, 35%);
+        color: darken($brand-warning, 20%);
+      }
+    }
+    &.panel-danger {
+      .panel-body {
+        background-color: lighten($brand-danger, 40%);
+        color: darken($brand-danger, 20%);
+      }
+    }
+    &.panel-info {
+      .panel-body {
+        background-color: lighten($brand-info, 35%);
+        color: darken($brand-info, 20%);
+      }
+    }
+    &.panel-cyan {
+      .panel-body {
+        background-color:  $lighten-cyan;
+        color: white;
+      }
+    }
+    &.panel-amethyst {
+      .panel-body {
+        background-color:  $lighten-amethyst;
+        color: white;
+      }
+    }
+    &.panel-green {
+      .panel-body {
+        background-color:  $lighten-green;
+        color: white;
+      }
+    }
+    &.panel-orange {
+      .panel-body {
+        background-color:  $lighten-orange;
+        color: white;
+      }
+    }
+    &.panel-red {
+      .panel-body {
+        background-color:  $lighten-red;
+        color: white;
+      }
+    }
+    &.panel-greensea {
+      .panel-body {
+        background-color:  $lighten-greensea;
+        color: white;
+      }
+    }
+    &.panel-dutch {
+      .panel-body {
+        background-color:  $lighten-dutch;
+        color: white;
+      }
+    }
+    &.panel-hotpink {
+      .panel-body {
+        background-color:  $lighten-hotpink;
+        color: white;
+      }
+    }
+    &.panel-drank {
+      .panel-body {
+        background-color:  $lighten-drank;
+        color: white;
+      }
+    }
+    &.panel-blue {
+      .panel-body {
+        background-color:  $lighten-blue;
+        color: white;
+      }
+    }
+    &.panel-lightred {
+      .panel-body {
+        background-color:  $lighten-lightred;
+        color: white;
+      }
+    }
+    &.panel-slategray {
+      .panel-body {
+        background-color:  $lighten-slategray;
+        color: white;
+      }
+    }
+    &.panel-darkgray {
+      .panel-body {
+        background-color:  $lighten-darkgray;
+        color: white;
+      }
+    }
+  }
+
+  &.panel-transparent {
+    border-left: 0;
+    border-right: 0;
+
+    &:last-of-type {
+      border-bottom: 0;
+    }
+
+    .panel-heading {
+      background: none;
+
+      .panel-title .accordion-toggle {
+        padding: 15px;
+      }
+    }
+
+    .panel-body {
+      background-color: #f7f7f7;
+      padding: 0;
+    }
+  }
+}

@@ -1,0 +1,402 @@
+.carousel-widget {
+  slick {
+    &.slick-initialized {
+      .slick-slide {
+        overflow: hidden;
+      }
+      .slick-dots {
+        bottom: -40px;
+        font-style: normal;
+        li {
+          margin: 0;
+          button {
+            &:before {
+              font-size: 11px;
+            }
+            &:focus {
+              &:before {
+                opacity: .25;
+              }
+            }
+          }
+          &.slick-active {
+            button {
+              &:before {
+                line-height: 19px;
+                font-size: 14px;
+              }
+              &:focus {
+                &:before {
+                  opacity: .75;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.lined-paper {
+  slick.slick-initialized {
+    .slick-dots {
+      bottom: -78px;
+    }
+  }
+}
+
+.carousel-widget[class*=bg-]:not(.bg-default),
+.tile-body[class*=bg-]:not(.bg-default),
+.tile-footer[class*=bg-]:not(.bg-default),
+.tile-header[class*=bg-]:not(.bg-default),
+.tile-widget[class*=bg-]:not(.bg-default),
+.tile[class*=bg-]:not(.bg-default) {
+  slick {
+    &.slick-initialized {
+      .slick-dots {
+        li {
+          button {
+            &:before {
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.profile-widget {
+  overflow: visible;
+  margin-top: 60px;
+
+  .tile-widget {
+    border-radius: 6px 6px 0 0;
+    padding: 50px 25px 0;
+
+    .divider {
+      display: block;
+      width: 80%;
+      height: 3px;
+      margin: 50px auto 0;
+      background: $transparent-black-4;
+    }
+  }
+
+  .profile-avatar {
+    width: 100px;
+    border: 6px solid $content-bg;
+    position: absolute;
+    left: 50%;
+    top: -30px;
+    margin-left: -50px;
+  }
+}
+
+.todo-widget {
+  form.add-todo {
+    position: relative;
+    margin-bottom: 35px;
+
+    .form-control {
+      border: 3px solid #e1ecf1;
+      border-radius: 6px;
+      height: 42px;
+      line-height: 42px;
+
+      &:hover {
+        border-color: darken(#e1ecf1, 10%);
+      }
+
+      &:focus {
+        box-shadow: none;
+        border-color: darken(#e1ecf1, 10%);
+      }
+    }
+
+    button {
+      position: absolute;
+      top: 6px;
+      right: 0;
+      color: #a8bdc7;
+
+      &:hover {
+        color: darken(#a8bdc7, 15%);
+      }
+    }
+  }
+  .todo-list {
+    >li {
+      border-bottom: 1px solid #f2f2f2;
+      position: relative;
+      padding: 5px 10px;
+
+      &:last-child {
+        border-bottom: 0;
+      }
+
+      .view {
+        >label {
+          margin: 0;
+        }
+      }
+
+      .remove-todo {
+        display: none;
+      }
+
+      &:hover {
+        .remove-todo {
+          display: block;
+        }
+      }
+
+      span {
+        @include user-select(none);
+      }
+
+      &.completed {
+        span {
+          text-decoration: line-through;
+          color: $font-color-lighter;
+        }
+      }
+
+      .edit {
+        display: none;
+      }
+
+      &.editing {
+        .view {
+          display: none;
+        }
+        .edit {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+// calendar widget
+.calendar-widget {
+  .datepicker {
+    table {
+      width: 100%;
+
+      .btn-default {
+        background-color: transparent;
+        color: white;
+
+        &:hover {
+          background-color: transparent;
+        }
+      }
+
+      thead {
+        tr {
+          &:first-child {
+            th {
+              &:first-child .btn,
+              &:last-child .btn {
+                font-size: 24px;
+                padding: 15px 10px;
+                color: $transparent-white-5;
+
+                &:hover {
+                  color: white;
+                }
+              }
+              &:nth-child(2) .btn {
+                font-size: $font-size-large;
+                strong {
+                  font-weight: $font-weight-light;
+                }
+              }
+            }
+          }
+          &:nth-child(2) {
+            th {
+              background-color: $transparent-black-2;
+              small {
+                font-size: $font-size-base;
+                line-height: 35px;
+              }
+            }
+          }
+        }
+      }
+
+      tbody {
+        tr {
+          td {
+            position: relative;
+            .btn {
+              font-size: $font-size-base;
+              font-weight: $font-weight-light;
+              padding: 11px 10px;
+
+              &:hover {
+                color: $lighter-lightred;
+              }
+
+              .text-muted {
+                color: $transparent-white-3;
+              }
+              .text-info {
+                color: $lightred;
+              }
+
+              &.active {
+                background-color: $lightred!important;
+                border-radius: 50px;
+                height: 30px;
+                padding: 0;
+                .text-info {
+                  color: white;
+                }
+                &:hover {
+                  color: white;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//message widget
+
+.message-widget {
+  .ta-toolbar {
+    margin: 0;
+    padding: 5px;
+    background-color: #f8f8f8;
+  }
+  .ta-scroll-window {
+    &.form-control {
+      border: 0;
+      border-bottom: 10px solid #f8f8f8;
+      border-radius: 0;
+      min-height: 160px;
+    }
+    >.ta-bind  {
+      min-height: 160px;
+    }
+  }
+  .ta-root.focussed {
+    .ta-scroll-window.form-control {
+      border-color: #e2e2e2;
+      box-shadow: none;
+    }
+    .ta-toolbar {
+      background-color: #e2e2e2;
+    }
+  }
+  form {
+    .form-control,
+    tags-input .tags {
+      border: 1px solid #f8f8f8;
+      background-color: #f8f8f8;
+      min-height: 36px;
+      line-height: 36px;
+      border-radius: 6px;
+      box-shadow: none;
+
+      .tag-item,
+      .input {
+        margin: 3px 2px;
+      }
+
+      .tag-item:not(.selected) {
+        background: white;
+        border: 1px solid #ccc;
+        color: $font-color;
+      }
+
+      .input {
+        background-color: #f8f8f8;
+      }
+
+      &:hover {
+        background-color: #f2f2f2;
+        border: 1px solid #f8f8f8;
+
+        .input {
+          background-color: #f2f2f2;
+        }
+      }
+
+      &:focus,
+      &:focus:hover,
+      &.focused {
+        border: 1px solid #ddd;
+        background-color: white;
+        box-shadow: none;
+
+        .input {
+          background-color: white;
+        }
+      }
+    }
+
+    tags-input .tags {
+      padding-left: 5px;
+    }
+  }
+}
+
+//appointments widget
+
+.appointments-widget {
+  .day {
+    font-size: 6vw;
+    line-height: 6vw;
+    font-weight: $font-weight-light;
+  }
+  .month {
+    font-size: 2vw;
+    line-height: 2.3vw;
+    font-weight: $font-weight-bold;
+  }
+
+  .b-l {
+    border-left: 2px solid $transparent-white-2;
+  }
+  .slick-slider {
+    .slick-list {
+      margin: 0 60px;
+    }
+    .slick-prev,
+    .slick-next {
+      width: 40px;
+      height: 40px;
+
+      &:before {
+        font-size: 40px;
+      }
+    }
+    .slick-prev {
+      left: -5px;
+    }
+    .slick-next {
+      right: -5px;
+    }
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .widget-appointments {
+    .day {
+      font-size: 120px;
+      line-height: 120px;
+    }
+    .month {
+      font-size: 36px;
+      line-height: 56px;
+    }
+  }
+}

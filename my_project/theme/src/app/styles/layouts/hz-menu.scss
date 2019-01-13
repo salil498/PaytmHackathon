@@ -1,0 +1,205 @@
+@media only screen and (min-width: 1200px) {
+  .appWrap.hz-menu {
+
+    &.animate {
+      minotaur-nav {
+        z-index: 9;
+      }
+    }
+
+    minotaur-nav {
+      width: 100%;
+      bottom: auto !important;
+      left: 0;
+      padding: 0!important;
+      z-index: 9;
+      background-color: darken($theme-default, 10%);
+
+      .slimScrollDiv {
+        overflow: visible !important;
+        border: 0;
+        >div {
+          overflow: visible !important;
+        }
+        .slimScrollBar {
+          display: none!important;
+        }
+      }
+
+      .nav-heading {
+        display: none;
+      }
+
+      .nav-sidebar {
+        padding: 0;
+        > li {
+          display: inline-block;
+          float: left;
+          overflow: visible !important;
+
+          > a {
+            color: $transparent-white-7;
+            text-align: center;
+            padding: 30px 15px 15px;
+
+            .badge {
+              right: -12px;
+              top: -8px;
+            }
+
+            .nav-text {
+              display: block;
+              font-size: 11px;
+            }
+
+            .indicator {
+              position: absolute;
+              left: 50%;
+              bottom: 4px;
+              margin: 0;
+              margin-left: -3px;
+              display: block;
+              float: none;
+              font-size: 12px;
+
+              &:after {
+                @include icon;
+                content: "\f107"!important;
+              }
+            }
+
+            > i {
+              top: -25px;
+              display: block;
+              float: none;
+              border-radius: 0;
+              width: auto;
+              height: auto;
+              line-height: normal;
+              background-color: transparent;
+              font-size: 14px;
+              color: $transparent-white-7;
+            }
+          }
+
+          &:hover {
+            >a {
+              background-color: darken($theme-default, 15%);
+              color: white;
+
+              >i {
+                color: white;
+              }
+            }
+          }
+
+          &.dropdown {
+            > ul {
+              position: absolute;
+              left: 0;
+              top: 100%;
+              width: auto;
+              min-width: 220px;
+              background-color: darken($theme-default, 15%);
+
+              li {
+                a {
+                  color: $transparent-white-7;
+                  font-size: 11px;
+                  padding: 8px 15px;
+
+                  &:hover {
+                    color: white;
+                    background-color: transparent;
+                  }
+
+                  >i {
+                    display: none;
+                  }
+                }
+
+                &.active {
+                  a {
+                    color: white!important;
+                  }
+                }
+              }
+            }
+            &.open {
+              > ul {
+                display: none !important;
+              }
+            }
+
+            &:hover {
+              > ul {
+                display: block !important;
+              }
+            }
+          }
+          li.submenu {
+            > ul {
+              position: absolute;
+              left: 100%;
+              top: 0;
+              width: auto;
+              min-width: 220px;
+              background-color: darken($theme-default, 15%);
+            }
+
+            &.open {
+              > ul {
+                display: none !important;
+              }
+            }
+
+            &:hover {
+              > ul {
+                display: block !important;
+              }
+            }
+          }
+        }
+      }
+
+      .nav-sidebar > .active > a,
+      .nav-sidebar > .active > a:hover,
+      .nav-sidebar > .active > a:focus,
+      .nav-sidebar > .dropdown.active.open > a,
+      .nav-sidebar > .dropdown.active.open > a:hover,
+      .nav-sidebar > .dropdown.active.open > a:focus{
+        background-color: $theme-default;
+        outline: 0;
+        color: white;
+        >i {
+          color: #fff;
+          background-color: transparent;
+        }
+        + ul > li.active > a {
+          color: #21252d;
+          > i {
+            color: #fff;
+            background-color: transparent;
+          }
+        }
+      }
+
+      &.nav-expanded {
+        overflow: visible;
+      }
+    }
+
+    minotaur-header {
+      .navigation-toggle {
+        display: none;
+      }
+    }
+    &.viewport-sm {
+      minotaur-header {
+        .navigation-toggle {
+          display: block;
+        }
+      }
+    }
+  }
+}

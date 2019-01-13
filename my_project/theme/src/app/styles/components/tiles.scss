@@ -1,0 +1,190 @@
+.mfp-content .tile {
+  position: relative;
+  width: 80%;
+  margin: 20px auto;
+  .controls {
+    minotaur-tile-close {
+      display: none;
+    }
+  }
+}
+
+.tile {
+  margin-bottom: 30px;
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: 0 5px 15px rgba(0,0,0,.05);
+  overflow: hidden;
+  position: relative;
+
+  &:after {
+    @include icon;
+    content: "\f1ce";
+    position: absolute;
+    top: 80px;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    font-size: 2em;
+    color: $theme-default;
+    display: none;
+    -webkit-animation: fa-spin 2s infinite linear;
+    animation: fa-spin 2s infinite linear;
+    transition: opacity .25s linear;
+  }
+
+  &.collapsed {
+    overflow: visible;
+  }
+
+  &.loading {
+    .tile-widget,
+    .tile-body,
+    .tile-footer {
+      opacity: .25;
+    }
+    &:after {
+      display: block;
+    }
+  }
+
+  &.isInFullScreen {
+    width: 90%;
+    overflow: auto;
+
+    .controls {
+      minotaur-tile-close {
+        display: none;
+      }
+      >li:first-child {
+        margin-right: 0!important;
+      }
+    }
+  }
+
+  &.mfp-hide {
+    display: block!important;
+  }
+
+  .tile-header {
+    position: relative;
+    padding: 30px 25px 15px;
+
+    .header-btn {
+      display: inline-block;
+      margin-right: 10px;
+      margin-top: -3px;
+      float: left;
+    }
+
+    .heading {
+      font-size: 28px;
+      color: $theme-default;
+      text-transform: uppercase;
+      padding: 0;
+      margin: 0;
+      letter-spacing: 2px;
+
+      &.basic {
+        text-transform: none;
+        letter-spacing: normal;
+      }
+
+      .note {
+        display: inline-block;
+        padding: 2px 5px;
+        background-color: $transparent-black-1;
+        font-size: $font-size-small;
+        text-transform: none;
+        position: relative;
+        top: -5px;
+        left: -5px;
+      }
+    }
+
+    .controls {
+      position: absolute;
+      right: 5px;
+      top: 5px;
+
+      .btn {
+        padding: 6px 8px;
+        font-size: 18px;
+        color: #94b9ca;
+        transition: color .15s linear;
+        box-shadow: none;
+
+        &:hover {
+          color: darken(#94b9ca, 15%);
+        }
+
+        &:active,
+        &:focus {
+          outline: 0;
+          box-shadow: none;
+        }
+      }
+
+      .btn-group {
+        &:active,
+        &:focus {
+          outline: 0;
+          box-shadow: none;
+        }
+      }
+    }
+
+  }
+
+  .tile-widget,
+  .tile-body,
+  .tile-footer {
+    transition: opacity .25s linear;
+    padding: 15px 25px;
+    position: relative;
+
+    &.full-accordion {
+      .panel-group {
+        margin: 0;
+
+        .panel {
+          border-radius: 0;
+          margin: 0;
+          border-width: 0;
+          border-top-width: 1px;
+
+          .panel-collapse {
+            .panel-body {
+              padding: 0;
+              background-color: rgba(0,0,0,.03);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.tile-simple {
+    .tile-header {
+      min-height: 25px;
+      .heading {
+        font-size: 20px;
+      }
+      .controls {
+        top: 0;
+        .btn {
+          font-size: 14px;
+        }
+      }
+    }
+    .tile-header {
+      padding: 20px 25px 15px;
+    }
+    .tile-widget,
+    .tile-body,
+    .tile-footer {
+      padding: 10px 25px;
+    }
+  }
+
+}

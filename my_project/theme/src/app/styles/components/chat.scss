@@ -1,0 +1,85 @@
+ul.chats {
+  list-style: none;
+  padding: 0;
+
+  >li {
+    margin: 20px auto 40px;
+    font-size: $font-size-small;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .media {
+      position: relative;
+      z-index: 1;
+    }
+
+    .media-body {
+      color: $font-color-light;
+      font-weight: $font-weight-light;
+    }
+
+    .name,
+    .datetime {
+      font-size: $font-size-base;
+      font-weight: $font-weight-normal;
+    }
+
+    .datetime {
+      font-size: $font-size-small;
+      color: $font-color-dark;
+    }
+
+    &.conversation-divider {
+      font-size: $font-size-xs;
+      color: white;
+      text-align: center;
+
+      span {
+        display: inline-block;
+        position: relative;
+        background-color: $theme-default;
+        padding: 4px 10px;
+        @include border-radius(2px);
+        @include box-shadow(0 1px 1px $transparent-black-05);
+      }
+    }
+
+    &.in {
+      .media-body {
+        text-align: left;
+        border-left: 3px solid $theme-default;
+        margin-left: 65px;
+        padding-left: 5px;
+      }
+      .name {
+        color: $theme-default;
+      }
+    }
+
+    &.out {
+      .media-body {
+        border-right: 3px solid $lightred;
+        margin-right: 65px;
+        text-align: right;
+        padding-right: 5px;
+      }
+      .name {
+        color: $lightred;
+      }
+      .name,
+      .datetime {
+        text-align: right;
+      }
+    }
+
+    &:last-child {
+      .media-body {
+        .post {
+          margin: -10px;
+        }
+      }
+    }
+  }
+}

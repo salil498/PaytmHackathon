@@ -1,0 +1,79 @@
+.dropdown {
+  .dropdown-menu {
+
+    &.with-arrow {
+      margin-top: 10px;
+      &:before {
+        content: "";
+        position: absolute;
+        right: 10px;
+        top: -10px;
+        @include triangle(18px, $transparent-black-15, up);
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        right: 11px;
+        top: -8px;
+        @include triangle(16px, white, up);
+      }
+    }
+
+    &.pull-right {
+      &.with-arrow {
+        &:before {
+          left: auto;
+          right: 11px;
+        }
+        &:after {
+          left: auto;
+          right: 12px;
+        }
+      }
+    }
+
+    > li > a > i {
+      width: 20px;
+      display: inline-block;
+    }
+
+    &.dropdown-menu-custom {
+      display: block;
+      top: -2px;
+      left: auto;
+      right: 0;
+      border: 0;
+      border-radius: 2px;
+      box-shadow: 0 2px 4px -1px rgba(0, 0, 0, .2), 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12);
+
+      transition: opacotity .3s cubic-bezier(0.19, 1, 0.22, 1), transform .3s cubic-bezier(0.19, 1, 0.22, 1);
+
+      transform: scale(0);
+      transform-origin: 90% 0;
+      backface-visibility: hidden;
+      opacity: 0;
+
+      >li {
+        a {
+          padding: 8px 20px;
+        }
+      }
+    }
+  }
+
+  &.open {
+    .dropdown-menu-custom {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  &.dropup {
+    .dropdown-menu {
+      &.dropdown-menu-custom {
+        top: auto;
+        bottom: -2px;
+      }
+    }
+  }
+}

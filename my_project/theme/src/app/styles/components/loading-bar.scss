@@ -1,0 +1,22 @@
+#loading-bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99999;
+
+  .bar {
+    position: absolute;
+    background-color: lighten($theme-default, 30%);
+    z-index: 9;
+  }
+}
+
+#loading-bar-spinner {
+  position: absolute;
+  z-index: 99999;
+
+  .spinner-icon {
+    border-top-color: lighten($theme-default, 30%);
+    border-left-color: lighten($theme-default, 30%);
+  }
+}

@@ -1,0 +1,104 @@
+.page-chat {
+  #inbox {
+    margin: 20px -15px -15px;
+
+    >li {
+      border-bottom: 1px solid $transparent-black-1;
+
+      &:last-child {
+        border-bottom: 0;
+        padding-bottom: 0;
+        margin-bottom: 0;
+      }
+
+      >a {
+        display: block;
+        position: relative;
+        padding: 15px;
+
+        &:hover {
+          text-decoration: none;
+
+          .chat-actions {
+            position: absolute;
+            display: block;
+            right: 15px;
+            bottom: 15px;
+          }
+        }
+
+        &:focus {
+          text-decoration: none;
+        }
+
+        .chat-actions {
+          font-size: 11px;
+          color: $font-color;
+          display: none;
+
+          >span {
+            margin-left: 4px;
+            cursor: pointer;
+
+            &.archive {
+              &:hover {
+                color: $red;
+              }
+            }
+
+            &.mark-unread {
+              &:hover {
+                color: $theme-default;
+                i {
+                  &:before {
+                    content: "\f111";
+                  }
+                }
+              }
+            }
+
+            &.mark-readed {
+              color: $theme-default;
+              &:hover {
+                color: $font-color;
+                i {
+                  &:before {
+                    content: "\f10c";
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &.active {
+        >a {
+          background-color: white;
+        }
+      }
+    }
+  }
+
+  ul.chats {
+    >li {
+      .media-body {
+        padding: 10px;
+        background-color: white;
+        border-radius: 3px;
+      }
+
+      &.in {
+        .media-body {
+          padding-left: 20px;
+        }
+      }
+
+      &.out {
+        .media-body {
+          padding-right: 20px;
+        }
+      }
+    }
+  }
+}

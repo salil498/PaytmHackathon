@@ -1,0 +1,117 @@
+html {
+  &.boxed-layout {
+    background-color: #fff;
+
+    body {
+      background-color: #fff;
+    }
+
+    #wrap {
+      margin: 0 auto;
+      position: relative;
+      background-color: $content-bg;
+    }
+
+    minotaur-header {
+      left: auto;
+      right: auto;
+
+      &.viewport-sm {
+        width: 100%;
+      }
+    }
+
+    minotaur-nav {
+      left: auto;
+      width: 280px;
+
+      &.navigation-sm {
+        width: 70px;
+
+        .nav-heading {
+          display: none;
+        }
+
+        .nav-sidebar {
+          li {
+            a {
+              .nav-text,
+              .indicator {
+                visibility: hidden;
+                white-space: nowrap;
+              }
+
+              >i {
+                margin-top: -30px;
+              }
+            }
+          }
+        }
+
+        &:hover {
+          left: auto;
+          width: 280px;
+
+          .nav-heading {
+            display: block;
+          }
+          .nav-sidebar {
+            li {
+              a {
+                .nav-text,
+                .indicator {
+                  visibility: visible;
+                  white-space: normal;
+                }
+
+                >i {
+                  margin-top: -10px;
+                }
+              }
+            }
+          }
+        }
+
+      }
+
+    }
+
+    #content {
+      bottom: 0;
+      @include box-shadow(0 0 20px rgba(0,0,0,0.2));
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  html {
+    &.boxed-layout {
+      #wrap,
+      minotaur-header {
+        width: 750px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  html {
+    &.boxed-layout {
+      #wrap,
+      minotaur-header {
+        width: 970px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  html {
+    &.boxed-layout {
+      #wrap,
+      minotaur-header {
+        width: 1170px;
+      }
+    }
+  }
+}

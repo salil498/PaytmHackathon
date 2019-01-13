@@ -1,0 +1,172 @@
+.alert {
+  display: block;
+  padding: 20px 25px;
+  border-radius: 2px;
+  border: 0;
+  color: white;
+  font-weight: $font-weight-light;
+
+  .close {
+    opacity: 1;
+    text-shadow: none;
+    font-weight: 100;
+    color: #fff;
+
+    &:hover {
+      color: #333;
+    }
+  }
+
+  .alert-link {
+    color: $transparent-white-7;
+    font-weight: $font-weight-normal;
+
+    &:hover {
+      color: #333;
+    }
+  }
+
+  &.alert-big {
+    padding: 20px 25px;
+  }
+
+  &.alert-dismissable {
+    padding-right: 35px;
+  }
+
+  &.closeable {
+    >.close {
+      right: 0;
+    }
+  }
+
+  &.notcloseable {
+    >.close {
+      display: none;
+    }
+  }
+
+  &.alert-primary {
+    background-color: $brand-primary;
+  }
+
+  &.alert-success {
+    background-color: $brand-success;
+  }
+
+  &.alert-warning {
+    background-color: $brand-warning;
+  }
+
+  &.alert-danger {
+    background-color: $brand-danger;
+  }
+
+  &.alert-info {
+    background-color: $brand-info;
+  }
+
+  &.alert-default {
+    background-color: $brand-default;
+  }
+
+  &.alert-cyan {
+    background-color: $cyan;
+  }
+
+  &.alert-amethyst {
+    background-color: $amethyst;
+  }
+
+  &.alert-green {
+    background-color: $green;
+  }
+
+  &.alert-orange {
+    background-color: $orange;
+  }
+
+  &.alert-red {
+    background-color: $red;
+  }
+
+  &.alert-greensea {
+    background-color: $greensea;
+  }
+
+  &.alert-dutch {
+    background-color: $dutch;
+  }
+
+  &.alert-hotpink {
+    background-color: $hotpink;
+  }
+
+  &.alert-drank {
+    background-color: $drank;
+  }
+
+  &.alert-blue {
+    background-color: $blue;
+  }
+
+  &.alert-lightred {
+    background-color: $lightred;
+  }
+
+  &.alert-slategray {
+    background-color: $slategray;
+  }
+
+  &.alert-darkgray {
+    background-color: $darkgray;
+  }
+
+  &.alert-theme {
+    background-color: $theme-default;
+  }
+
+}
+
+// toast notifications
+
+#toast-container {
+  .toast {
+    opacity: .8!important;
+    border-radius: 2px;
+    @include box-shadow(none);
+    @include transition(opacity .25s);
+    position: relative;
+
+    &:hover {
+      opacity: 1!important;
+      @include box-shadow(none);
+    }
+
+    .toast-title {
+      font-family: $font-raleway;
+    }
+
+    .toast-message {
+      font-size: $font-size-small;
+    }
+
+    >.fa:not(.toast-close-button) {
+      position: absolute;
+      font-size: 2em;
+      left: 13px;
+    }
+  }
+  .toast-close-button {
+    font-size: 18px;
+    font-weight: $font-weight-normal;
+    text-shadow: none;
+    opacity: 1;
+
+    &:hover {
+      text-shadow: none;
+      opacity: .5;
+      color: white;
+    }
+  }
+}
