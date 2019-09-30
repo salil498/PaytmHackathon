@@ -21,5 +21,6 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^jyot/',include('jyot.urls')),
+    url(r'^payment/',include('payment.urls')), //hactober
 
 ]
